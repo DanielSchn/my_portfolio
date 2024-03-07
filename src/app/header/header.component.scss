@@ -1,0 +1,24 @@
+header {
+    height: 104px;
+    background-color: #141D2F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >img {
+        height: 50px;
+        margin-left: 80px;
+    }
+
+    >div {
+        display: flex;
+        flex-direction: row;
+        margin-right: 80px;
+        gap: 29px;
+
+        >p {
+            color: #FFFFFF;
+            font-size: 23px;
+        }
+    }
+}
