@@ -1,24 +1,34 @@
-header {
-    height: 104px;
-    background-color: #141D2F;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@import "../../mixin.scss";
 
-    >img {
-        height: 50px;
-        margin-left: 80px;
-    }
+header {
+    width: 100%;
+    position: fixed;
 
     >div {
-        display: flex;
-        flex-direction: row;
-        margin-right: 80px;
-        gap: 29px;
+        height: 104px;
+        background-color: $darkblue;
+        @include dFlex(space-between);
+        
+        >img {
+            height: 50px;
+            margin-left: 80px;
+        }
 
-        >p {
-            color: #FFFFFF;
-            font-size: 23px;
+        >div {
+            display: flex;
+            flex-direction: row;
+            margin-right: 80px;
+            gap: 29px;
+
+            >a {
+                color: $white;
+                font-size: 23px;
+                text-decoration: none;
+
+                &:hover {
+                    color: $skyblue;
+                }
+            }
         }
     }
 }

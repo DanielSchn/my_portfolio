@@ -1,0 +1,9 @@
+@mixin dFlex ($jc: center, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+$white: #FFFFFF;
+$skyblue: #00BEE8;
+$darkblue: #141D2F;
