@@ -2,5 +2,46 @@
 
 section {
     height: 100vh;
+    width: 100%;
     background-color: $darkblue;
+    @include dFlex();
+
+    >.shadow-left {
+        height: 608px;
+        position: absolute;
+        left: -170px;
+    }
+
+    >.shadow-right {
+        height: 608px;
+        position: absolute;
+        right: -350px;
+    }
+
+    >.text-container {
+        display: flex;
+        z-index: 1;
+
+        .i-am {
+            font-size: clamp(10px, 3vw, 90px);
+            transform: rotate(-90deg);
+            color: $white;
+        }
+
+        .daniel-frontend-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .daniel-schneider {
+            font-size: clamp(40px, 6vw, 128px);
+            font-weight: 700;
+            color: $white;
+        }
+
+        .frontend-dev {
+            font-size: clamp(40px, 4.5vw, 64px);
+            color: $purple;
+        }
+    }
 }

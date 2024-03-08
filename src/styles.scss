@@ -1,3 +1,5 @@
+@import './mixin.scss';
+
 /* poppins-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -55,4 +57,6 @@
     margin: 0;
     border: unset;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: $darkblue;
   }

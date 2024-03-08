@@ -3,10 +3,13 @@
 header {
     width: 100%;
     position: fixed;
+    @include dFlex();
+    background-color: rebeccapurple;
 
     >div {
         height: 104px;
-        background-color: $darkblue;
+        max-width: 1440px;
+        width: 100%;
         @include dFlex(space-between);
         
         >img {
