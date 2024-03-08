@@ -5,6 +5,7 @@ header {
     position: fixed;
     @include dFlex();
     background-color: rebeccapurple;
+    z-index: 15;
 
     >div {
         height: 104px;

@@ -55,8 +55,11 @@
 
   body {
     margin: 0;
-    border: unset;
-    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     background-color: $darkblue;
+  }
+
+  * {
+    border: unset;
+    font-family: 'Poppins', sans-serif;
   }
