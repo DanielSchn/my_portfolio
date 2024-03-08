@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,5 +12,5 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'myportfolio';
+  title = 'Daniel Schneider';
 }
