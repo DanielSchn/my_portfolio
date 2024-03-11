@@ -1,5 +1,75 @@
 @import '../../mixin.scss';
 
-p {
+section {
+    width: 100%;
+    @include dFlex();
+
+    >.about-me-container {
+        @include dFlex(space-around);
+        width: 100%;
+        max-width: 1920px;
+
+        >.about-me {
+            width: 640px;
+
+            h1 {
+                font-size: 90px;
+                color: $white;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            >.bulb-container {
+                @include dFlex();
+                margin-top: 40px;
+
+                >img {
+                    width: 50px;
+                    height: auto;
+
+                    &:hover {
+                        transition: 150ms;
+                        scale: 1.1;
+                    }
+                }
+
+                >span {
+                    margin-left: 50px;
+                    padding-right: 32px;
+                }
+            }
+
+            >.puzzle-container {
+                @include dFlex();
+                margin-top: 32px;
+
+                >img {
+                    width: 50px;
+                    height: auto;
+
+                    &:hover {
+                        transition: 150ms;
+                        scale: 1.1;
+                    }
+                }
+
+                >span {
+                    margin-left: 50px;
+                    padding-right: 32px;
+                }
+            }
+        }
+
+        >.image-container {
+
+            >.my-image {
+                height: 647px;
+            }
+        }
+    }
+}
+
+span {
     color: $white;
+    font-size: 16px;
 }
