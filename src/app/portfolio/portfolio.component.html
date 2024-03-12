@@ -1,6 +1,9 @@
 <section>
     <div class="portfolio-container">
-        
+
+        <img class="shadow-right" src="./assets/img/icons/shadow_skills_portfolio.png" alt="Shadow">
+        <img class="shadow-left" src="./assets/img/icons/shadow_left_contact.png" alt="Shadow">
+
         <div class="portfolio-headline">
             <img src="./assets/img/icons/portfolio_line.png" alt="Vector">
             <div class="text-portfolio">
@@ -17,15 +20,24 @@
                     <div class="portfolio-image">
                         <img [src]="list.img" [alt]="list.name">
                     </div>
-                    <!-- <div class="portfolio-description">
-                <h1 [innerHTML]="list.name"></h1>
-            </div> -->
-    
+                    <div class="buttons">
+                        <button class="btn1"><a [href]="list.github" target="_blank">Github</a></button>
+                        <button class="btn2"><a [href]="list.live" target="_blank">Live test</a></button>
+                    </div>
+                    <div class="popup">
+                        <div class="portfolio-description">
+                            <h1 [innerHTML]="list.name"></h1>
+                            <span class="descript" [innerHTML]="list.description"></span>
+                            <span class="tech" [innerHTML]="list.tech"></span>
+                        </div>
+                    </div>
+                    
+
                 </div>
             </div>
 
         </div>
-        
+
 
     </div>
 </section>

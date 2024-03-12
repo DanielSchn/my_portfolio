@@ -9,7 +9,19 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
+        >.shadow-right {
+            position: absolute;
+            right: -380px;
+            z-index: 0;
+        }
+
+        >.shadow-left {
+            position: absolute;
+            left: -550px;
+            bottom: -3550px;
+        }
+
 
         >.portfolio-headline {
             width: 100%;
@@ -45,12 +57,112 @@ section {
                     border: 1px solid $skyblue;
                     border-radius: 10px;
                     @include dFlex();
+                    flex-direction: column;
+                    overflow: hidden;
+                    background-color: $darkblue;
+                    z-index: 1;
+
+                    &:hover {
+                        
+
+                        >.portfolio-image {
+
+                            >img {
+                                scale: 1.75;
+                                z-index: 0;
+                                transition: ease-in-out 150ms;
+                            }
+                        }
+
+                        >.buttons {
+                            display: flex;
+                        }
+
+                        >.popup {
+                            display: block;
+                        }
+
+
+
+                    }
 
                     >.portfolio-image {
 
                         >img {
                             width: 500px;
+                            z-index: 0;
+
                         }
+                    }
+
+                    >.buttons {
+                        display: none;
+                        position: absolute;
+                        z-index: 50;
+                        gap: 64px;
+
+                        >.btn1 {
+                            cursor: pointer;
+                            width: 137px;
+                            height: 58px;
+                            border: 1px solid $skyblue;
+                            border-radius: 10px;
+                            background-color: unset;
+
+                            >a {
+                                color: $white;
+                                text-decoration: none;
+                                font-size: 23px;
+                            }
+                        }
+
+                        >.btn2 {
+                            cursor: pointer;
+                            width: 137px;
+                            height: 58px;
+                            border-radius: 10px;
+                            background-color: $purple;
+
+                            >a {
+                                color: $white;
+                                font-size: 23px;
+                                text-decoration: none;
+                            }
+                        }
+                        
+                    }
+
+                    >.popup {
+                        display: none;
+                        height: 250px;
+                        width: 100%;
+                        background-color: $white;
+                        border-radius: 10px;
+                        z-index: 500;
+
+                        >.portfolio-description {
+                            @include dFlex();
+                            flex-direction: column;
+                            
+
+                            >h1 {
+                                color: $purple;
+                                font-size: 32px;
+                            }
+
+                            >.descript {
+                                color: $black;
+                                font-size: 23px;
+                                text-align: center;
+                                margin-bottom: 8px;
+                            }
+
+                            >.tech {
+                                color: $skyblue;
+                                font-size: 23px;
+                            }
+                        }
+
                     }
                 }
             }
