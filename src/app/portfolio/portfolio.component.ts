@@ -13,7 +13,6 @@ export class PortfolioComponent {
     {
       name: 'Join',
       img: './assets/img/join.png',
-      imgHover: './assets/img/join_screen.png',
       description: 'Task manager inspired by the Kanban System.',
       tech: 'JavaScript | HTML | CSS',
       live: 'https://join.dschneider-dev.de',
@@ -22,20 +21,18 @@ export class PortfolioComponent {
     {
       name: 'El Pollo Loco',
       img: './assets/img/pollo_loco.png',
-      imgHover: './assets/img/pollo_loco_screen.png',
       description: 'Jump, run and throw game based on object oriented development.',
       tech: 'JavaScript | HTML | CSS | OOP',
       live: 'https://polloloco.dschneider-dev.de',
       github: 'https://github.com/DanielSchn/el_pollo_loco'
     },
     {
-      name: 'Comming soon',
-      img: './assets/img/pollo_loco.png',
-      imgHover: './assets/img/pollo_loco_screen.png',
-      description: 'Jump, run and throw game based on object oriented development.',
-      tech: 'JavaScript | HTML | CSS | OOP',
-      live: 'https://polloloco.dschneider-dev.de',
-      github: 'https://github.com/DanielSchn/el_pollo_loco'
+      name: 'Pokedex',
+      img: './assets/img/pokedex.png',
+      description: 'A short journey back to childhood. Pokedex with a rest api.',
+      tech: 'JavaScript | HTML | CSS | Rest Api',
+      live: 'https://daniel-schneider.developerakademie.net/pokedex/',
+      github: 'https://github.com/DanielSchn/Pokedex_API'
     },
   ];
 }
