@@ -3,7 +3,7 @@
 section {
     width: 100%;
     position: relative;
-    // margin-top: -700px;
+    margin-top: -350px;
     z-index: 100;
     @include dFlex();
 
@@ -11,7 +11,7 @@ section {
         width: 100%;
         max-width: 1920px;
         @include dFlex(space-between);
-        margin: 0 64px 0 64px;
+        margin-left: 64px;
 
         >.skill-icons-container {
             display: flex;
@@ -28,6 +28,37 @@ section {
                 >img {
                     width: 60px
                 }
+            }
+        }
+
+        >.text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 40px;
+
+            >.skills-line-container {
+                display: flex;
+                align-items: center;
+                gap: 64px;
+
+                >h1 {
+                    font-size: 90px;
+                    margin: 0;
+                }
+            }
+
+            >span {
+                font-size: 16px;
+            }
+
+            >button {
+                height: 58px;
+                width: 200px;
+                border-radius: 10px;
+                background-color: $skyblue;
+                font-size: 23px;
+                color: $white;
             }
         }
 

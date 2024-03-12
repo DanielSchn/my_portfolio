@@ -4,19 +4,16 @@ section {
     width: 100%;
     @include dFlex();
     flex-direction: column;
-    // background: url('../../assets/img/icons/wave.png');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position-y: calc(480px - 5vw);
 
     >.about-me-container {
-        @include dFlex(space-around);
+        @include dFlex(space-between);
         width: 100%;
         max-width: 1920px;
 
         >.about-me {
             width: 640px;
             z-index: 10;
+            margin-left: 64px;
 
             h1 {
                 font-size: 90px;
