@@ -1,0 +1,9 @@
+@import "../../mixin.scss";
+
+section {
+
+    >.contact-section {
+        @include dFlex();
+        flex-direction: column;
+    }
+}
