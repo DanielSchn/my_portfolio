@@ -1,11 +1,44 @@
 @import '../../mixin.scss';
 
 section {
+    width: 100%;
     position: relative;
-    margin-top: -700px;
+    // margin-top: -700px;
     z-index: 100;
+    @include dFlex();
 
-    >h1 {
-        color: $white;
+    >.skill-container {
+        width: 100%;
+        max-width: 1920px;
+        @include dFlex(space-between);
+        margin: 0 64px 0 64px;
+
+        >.skill-icons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 80px;
+            width: 550px;
+
+            >.skillset-icons {
+                @include dFlex();
+                flex-direction: column;
+                text-align: center;
+
+                >img {
+                    width: 60px
+                }
+            }
+        }
+
+
     }
+
+
+}
+
+h1,
+p,
+span {
+    color: $white;
 }

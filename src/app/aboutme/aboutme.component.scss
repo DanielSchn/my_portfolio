@@ -90,7 +90,9 @@ section {
 
     >.wave {
         width: 100%;
-        margin-top: -285px;
+        height: 500px;
+        position: relative;
+        top: -142px;
         z-index: 6;
     }
 }
