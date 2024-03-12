@@ -1,0 +1,65 @@
+@import "../../mixin.scss";
+
+
+section {
+    width: 100%;
+
+    >.portfolio-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        >.portfolio-headline {
+            width: 100%;
+            max-width: 1920px;
+            @include dFlex(start);
+            flex-direction: row;
+            gap: 32px;
+
+            >.text-portfolio {
+                >h1 {
+                    font-size: 90px;
+                    margin-bottom: 32px;
+                }
+            }
+        }
+
+        >.enumeration-position {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 64px;
+
+            >.enumeration-container {
+                @include dFlex();
+                flex-wrap: wrap;
+                width: 1300px;
+                gap: 32px;
+
+
+                >.portfolio {
+                    width: 600px;
+                    height: 600px;
+                    border: 1px solid $skyblue;
+                    border-radius: 10px;
+                    @include dFlex();
+
+                    >.portfolio-image {
+
+                        >img {
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+h1,
+span,
+p {
+    color: $white;
+}

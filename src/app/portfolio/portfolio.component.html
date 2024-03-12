@@ -1,0 +1,31 @@
+<section>
+    <div class="portfolio-container">
+        
+        <div class="portfolio-headline">
+            <img src="./assets/img/icons/portfolio_line.png" alt="Vector">
+            <div class="text-portfolio">
+                <h1>Portfolio</h1>
+                <span>
+                    This page is a example of my work!<br>Feel free to view the projects I have developed.
+                </span>
+            </div>
+        </div>
+
+        <div class="enumeration-position">
+            <div class="enumeration-container">
+                <div class="portfolio" *ngFor="let list of portfolioList">
+                    <div class="portfolio-image">
+                        <img [src]="list.img" [alt]="list.name">
+                    </div>
+                    <!-- <div class="portfolio-description">
+                <h1 [innerHTML]="list.name"></h1>
+            </div> -->
+    
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+</section>
