@@ -14,6 +14,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             //parse the Payload from text format to Object
             $params = json_decode($json);
     
+            // params that given from the contactData array
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
@@ -27,7 +28,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: noreply@dschneider-dev.de";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;

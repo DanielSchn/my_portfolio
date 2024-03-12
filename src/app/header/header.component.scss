@@ -4,7 +4,7 @@ header {
     width: 100%;
     position: fixed;
     @include dFlex();
-    background-color: rebeccapurple;
+    background-color: $darkblue;
     z-index: 999;
 
     >div {
