@@ -19,7 +19,7 @@ section {
         >.shadow-left {
             position: absolute;
             left: -550px;
-            bottom: -3550px;
+            bottom: -3220px;
         }
 
 
@@ -63,7 +63,7 @@ section {
                     z-index: 1;
 
                     &:hover {
-                        
+
 
                         >.portfolio-image {
 
@@ -101,35 +101,32 @@ section {
                         z-index: 50;
                         gap: 64px;
 
-                        >.btn1 {
-                            cursor: pointer;
-                            width: 137px;
-                            height: 58px;
-                            border: 1px solid $skyblue;
-                            border-radius: 10px;
-                            background-color: unset;
+                        >a {
+                            font-size: 23px;
+                            color: $white;
 
-                            >a {
-                                color: $white;
-                                text-decoration: none;
+                            >.btn1 {
+                                cursor: pointer;
+                                width: 137px;
+                                height: 58px;
+                                border: 1px solid $skyblue;
+                                border-radius: 10px;
+                                background-color: unset;
                                 font-size: 23px;
+                                color: $white;
+                            }
+
+                            >.btn2 {
+                                cursor: pointer;
+                                width: 137px;
+                                height: 58px;
+                                border-radius: 10px;
+                                background-color: $purple;
+                                font-size: 23px;
+                                color: $white;
                             }
                         }
 
-                        >.btn2 {
-                            cursor: pointer;
-                            width: 137px;
-                            height: 58px;
-                            border-radius: 10px;
-                            background-color: $purple;
-
-                            >a {
-                                color: $white;
-                                font-size: 23px;
-                                text-decoration: none;
-                            }
-                        }
-                        
                     }
 
                     >.popup {
@@ -143,7 +140,7 @@ section {
                         >.portfolio-description {
                             @include dFlex();
                             flex-direction: column;
-                            
+
 
                             >h1 {
                                 color: $purple;

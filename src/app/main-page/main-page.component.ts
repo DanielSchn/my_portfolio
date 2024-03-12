@@ -5,6 +5,7 @@ import { AbovethefoldComponent } from '../abovethefold/abovethefold.component';
 import { ConnectComponent } from '../connect/connect.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-main-page',
@@ -14,7 +15,8 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
     AbovethefoldComponent,
     ConnectComponent,
     SkillsComponent,
-    PortfolioComponent],
+    PortfolioComponent,
+    ContactComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
