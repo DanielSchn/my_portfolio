@@ -1,9 +1,11 @@
 @import "../../mixin.scss";
 
 section {
+    @include dFlex();
 
     >.contact-section {
         width: 100%;
+        max-width: 1920px;
         @include dFlex();
         flex-direction: column;
 
@@ -21,7 +23,7 @@ section {
         >.contact-form-text-area {
             width: 100%;
             max-width: 1920px;
-            @include dFlex(space-between);
+            @include dFlex(space-between, start);
 
 
             >.contact-description {

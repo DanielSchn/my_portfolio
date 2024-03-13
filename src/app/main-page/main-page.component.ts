@@ -6,6 +6,7 @@ import { ConnectComponent } from '../connect/connect.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { ContactComponent } from '../contact/contact.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-main-page',
@@ -16,7 +17,8 @@ import { ContactComponent } from '../contact/contact.component';
     ConnectComponent,
     SkillsComponent,
     PortfolioComponent,
-    ContactComponent],
+    ContactComponent,
+    FooterComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
