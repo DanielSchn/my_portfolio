@@ -3,7 +3,133 @@
 section {
 
     >.contact-section {
+        width: 100%;
         @include dFlex();
         flex-direction: column;
+
+        >.contact-head {
+            width: 100%;
+            max-width: 1920px;
+            @include dFlex(end);
+            gap: 32px;
+
+            >h1 {
+                font-size: 90px;
+            }
+        }
+
+        >.contact-form-text-area {
+            width: 100%;
+            max-width: 1920px;
+            @include dFlex(space-between);
+
+
+            >.contact-description {
+                width: 100%;
+                max-width: 1920px;
+                @include dFlex(center, start);
+                flex-direction: column;
+
+                >.problem-container {
+                    @include dFlex(start);
+                    gap: 64px;
+                }
+
+                >.text-container {
+                    width: 25%;
+                    margin-left: 118px;
+                }
+            }
+
+            >.contact-container {
+                // margin-right: 64px;
+
+                >form {
+                    @include dFlex();
+                    flex-direction: column;
+                    width: 617px;
+                    gap: 24px;
+
+                    >input {
+                        width: 100%;
+                        height: 50px;
+                        background-color: $darkblue;
+                        border: 1px solid $purple;
+                        border-radius: 10px;
+                    }
+
+                    >textarea {
+                        width: 100%;
+                        height: 202px;
+                        background-color: $darkblue;
+                        border: 1px solid $purple;
+                        border-radius: 10px;
+                    }
+
+                    >.privacy-container {
+                        // @include dFlex();
+                        // gap: 8px;
+
+                        >.custom-checkbox-label {
+                            @include dFlex();
+                            gap: 8px;
+
+                            >.privacy-checkbox {
+                                display: none;
+                            }
+                                
+                            >.privacy-checkbox:checked + .custom-checkbox::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 7px;
+                                    top: 1px;
+                                    width: 6px;
+                                    height: 12px;
+                                    border: solid $skyblue;
+                                    border-width: 0 2px 2px 0;
+                                    transform: rotate(45deg);
+                                    background: transparent;
+                                }
+
+                            >.custom-checkbox {
+                                display: inline-block;
+                                vertical-align: middle;
+                                width: 20px;
+                                height: 20px;
+                                border: 1px solid $skyblue;
+                                border-radius: 2px;
+                                cursor: pointer;
+                                position: relative;
+                            }
+    
+                            >p {
+                                font-size: 14px;
+                            }
+
+                        }
+
+                        
+                    }
+
+                    >.submit-button {
+                        width: 253px;
+                        height: 58px;
+                        border-radius: 10px;
+                        background-color: $grey;
+                    }
+
+                }
+
+            }
+        }
+
+
     }
+}
+
+h1,
+h2,
+span,
+p {
+    color: $white;
 }
