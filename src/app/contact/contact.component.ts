@@ -21,8 +21,6 @@ export class ContactComponent {
     agreeToPrivacyPolicy: false,
   };
 
-
-
   mailTest = true;
 
   post = {
