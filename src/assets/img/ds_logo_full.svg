@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="80.978493mm"
+   height="16.153286mm"
+   viewBox="0 0 80.978493 16.153286"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="daniel_schneider_logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="2"
+     inkscape:cx="404.75"
+     inkscape:cy="279.5"
+     inkscape:window-width="1639"
+     inkscape:window-height="1360"
+     inkscape:window-x="6032"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="-2.4932237,292.99414"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="44.460773,283.30135"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="84.518213,289.32035"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="28.244264,13.575892"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="80.896347,19.529017"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0.066139594,30.44308"
+       orientation="1,0"
+       id="guide6"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <rect
+       x="141.63078"
+       y="50.719131"
+       width="223.92975"
+       height="64.116638"
+       id="rect2" />
+    <rect
+       x="144.50168"
+       y="225.84369"
+       width="524.41669"
+       height="395.22644"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-67.865506,-75.94898)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26470958,0,0,0.13288226,-0.05169125,43.067476)"
+       id="text1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Aboreto;-inkscape-font-specification:Aboreto;text-align:center;white-space:pre;shape-inside:url(#rect1);fill:#ffffff;stroke:#000000;stroke-width:0.5;stroke-opacity:0.197615"><tspan
+         x="249.50998"
+         y="314.80927"
+         id="tspan2"><tspan
+           style="font-family:Poppins;-inkscape-font-specification:Poppins"
+           id="tspan1">DANIEL</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,63.226826,72.028833)"
+       id="text2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Aboreto;-inkscape-font-specification:Aboreto;text-align:center;white-space:pre;shape-inside:url(#rect2);fill:#ffffff;stroke:#000000;stroke-width:0.5;stroke-opacity:0.197615"><tspan
+         x="182.38229"
+         y="75.431425"
+         id="tspan5"><tspan
+           style="font-family:Poppins;-inkscape-font-specification:Poppins"
+           id="tspan3">SCHNEIDER</tspan></tspan></text>
+    <path
+       id="path2"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.102259;stroke-opacity:0.197615"
+       d="m 107.02815,89.616842 c 0.0185,5.99e-4 -4.03234,0.58418 -16.513102,0.58418 -12.480746,0 -22.582254,0.228651 -22.598391,-0.58418 -0.0169,-0.851011 10.117645,-0.58418 22.598391,-0.58418 12.480762,0 15.904452,0.565035 16.513102,0.58418 z"
+       sodipodi:nodetypes="sssss" />
+  </g>
+</svg>

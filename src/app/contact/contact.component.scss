@@ -8,6 +8,7 @@ section {
         max-width: 1920px;
         @include dFlex();
         flex-direction: column;
+        z-index: 500;
 
         >.contact-head {
             width: 100%;
