@@ -9,7 +9,6 @@ section {
         justify-content: space-between;
         width: 100%;
         max-width: 1920px;
-        margin-right: 64px;
 
         >.contact-left {
             display: flex;
@@ -37,6 +36,7 @@ section {
         }
 
         >.contact-right {
+            margin-right: 64px;
 
             >.scroll-down {
                 margin-top: -130px;

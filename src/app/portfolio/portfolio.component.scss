@@ -2,10 +2,12 @@
 
 
 section {
+    @include dFlex();
     width: 100%;
 
     >.portfolio-container {
         width: 100%;
+        max-width: 1920px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -27,7 +29,6 @@ section {
 
         >.portfolio-headline {
             width: 100%;
-            max-width: 1920px;
             @include dFlex(start);
             flex-direction: row;
             gap: 32px;
@@ -177,10 +178,10 @@ p {
 
 @media (min-width: 1921px) {
     .shadow-left {
-      left: calc((100vw - 1920px) / 2 - 9px) !important;
+      left: calc((100vw - 1920px) / 2 - 8px) !important;
     }
 
     .shadow-right {
-        right: calc((100vw - 1920px) / 2 - 9px) !important;
+        right: calc((100vw - 1920px) / 2 - 8px) !important;
     }
   }

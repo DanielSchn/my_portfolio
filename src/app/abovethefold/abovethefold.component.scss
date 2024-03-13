@@ -3,7 +3,6 @@
 section {
     height: 100vh;
     width: 100%;
-    background-color: $darkblue;
     @include dFlex();
 
 
@@ -13,13 +12,13 @@ section {
         flex-direction: column;
 
         >.shadow-left {
-            height: 608px;
+            height: 912px;
             position: absolute;
             left: 0;
         }
 
         >.shadow-right {
-            height: 608px;
+            height: 912px;
             position: absolute;
             right: 0;
         }
@@ -82,10 +81,10 @@ section {
 
 @media (min-width: 1921px) {
     .shadow-left {
-        left: calc((100vw - 1920px) / 2 - 9px) !important;
+        left: calc((100vw - 1920px) / 2 - 8px) !important;
     }
 
     .shadow-right {
-        right: calc((100vw - 1920px) / 2 - 9px) !important;
+        right: calc((100vw - 1920px) / 2 - 8px) !important;
     }
 }
