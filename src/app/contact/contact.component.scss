@@ -36,7 +36,7 @@ section {
                 }
 
                 >.text-container {
-                    width: 25%;
+                    width: 50%;
                     margin-left: 118px;
                 }
             }
@@ -49,6 +49,30 @@ section {
                     flex-direction: column;
                     width: 617px;
                     gap: 24px;
+
+                    >.input-textarea-styling {
+
+                        &:hover {
+                            border-color: $bluegreen;
+                        }
+
+                        &:focus {
+                            border: 1px solid $bluegreen;
+                            outline: none;
+                        }
+
+                        &.ng-dirty.ng-invalid {
+                            border-color: $invalid;
+                        }
+
+                        &.ng-touched.ng-invalid {
+                            border-color: $invalid;
+                        }
+
+                        &.ng-valid {
+                            border-color: $valid;
+                        }
+                    }
 
                     >input {
                         width: 90%;
@@ -69,6 +93,10 @@ section {
 
                     >.privacy-container {
 
+                        >.warn-message {
+                            margin-left: 0;
+                        }
+
                         >.custom-checkbox-label {
                             @include dFlex();
                             gap: 8px;
@@ -76,22 +104,22 @@ section {
                             >.privacy-checkbox {
                                 display: none;
                             }
-                                
-                            >.privacy-checkbox:checked + .custom-checkbox::before {
-                                    content: '';
-                                    position: absolute;
-                                    left: 7px;
-                                    top: 1px;
-                                    width: 6px;
-                                    height: 12px;
-                                    border: solid $skyblue;
-                                    border-width: 0 2px 2px 0;
-                                    transform: rotate(45deg);
-                                }
 
-                                >.privacy-checkbox:checked + .custom-checkbox {
-                                    background-color: $checked;
-                                }
+                            >.privacy-checkbox:checked+.custom-checkbox::before {
+                                content: '';
+                                position: absolute;
+                                left: 7px;
+                                top: 1px;
+                                width: 6px;
+                                height: 12px;
+                                border: solid $skyblue;
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                            }
+
+                            >.privacy-checkbox:checked+.custom-checkbox {
+                                background-color: $checked;
+                            }
 
                             >.custom-checkbox {
                                 display: inline-block;
@@ -103,14 +131,14 @@ section {
                                 cursor: pointer;
                                 position: relative;
                             }
-    
+
                             >p {
                                 font-size: 14px;
                             }
 
                         }
 
-                        
+
                     }
 
                     >.submit-button {
@@ -135,13 +163,9 @@ section {
                             transition: ease-in-out 150ms;
                         }
                     }
-
                 }
-
             }
         }
-
-
     }
 }
 
@@ -163,4 +187,13 @@ a {
     &:hover {
         filter: brightness(1.5);
     }
+}
+
+.warn-message {
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    margin-left: 15px;
+    margin-top: -20px;
+    color: $invalid;
 }
