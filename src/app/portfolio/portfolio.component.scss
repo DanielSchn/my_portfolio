@@ -178,10 +178,10 @@ p {
 
 @media (min-width: 1921px) {
     .shadow-left {
-      left: calc((100vw - 1920px) / 2 - 8px) !important;
+      left: calc((100vw - 1920px) / 2 - 3px) !important;
     }
 
     .shadow-right {
-        right: calc((100vw - 1920px) / 2 - 8px) !important;
+        right: calc((100vw - 1920px) / 2 - 3px) !important;
     }
   }
