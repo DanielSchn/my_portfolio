@@ -1,5 +1,7 @@
 <section>
     <div class="skill-container">
+
+        <a class="button-responsive" href="#contact"><button>Get in touch</button></a>
         <div class="skill-icons-container">
             <div class="skillset-icons" *ngFor="let skill of skillsList">
                 <img [src]="skill.url" [alt]="skill.name">
@@ -13,7 +15,9 @@
             </div>
 
             <span>I have gained experience in building projects with various<br>front end technologies and concepts.</span>
-            <a href="#contact"><button>Get in touch</button></a>
+            <a class="button-desktop" href="#contact"><button>Get in touch</button></a>
         </div>
+        
     </div>
+    
 </section>

@@ -176,12 +176,53 @@ p {
     color: $white;
 }
 
-@media (min-width: 1921px) {
+@media screen and (min-width: 1921px) {
     .shadow-left {
-      left: calc((100vw - 1920px) / 2 - 3px) !important;
+        left: calc((100vw - 1920px) / 2 - 3px) !important;
     }
 
     .shadow-right {
         right: calc((100vw - 1920px) / 2 - 3px) !important;
     }
-  }
+}
+
+@media screen and (max-width:1350px) {
+    .text-portfolio {
+        >h1 {
+            font-size: 65px !important;
+        }
+
+        >span {
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .portfolio {
+        width: 500px !important;
+        height: 500px !important;
+
+        &:hover {
+            >.portfolio-image {
+                >img {
+                    scale: 1.4 !important;
+                }
+            }
+        }
+    }
+
+    .portfolio-description {
+        h1 {
+            font-size: 26px !important;
+        }
+    }
+
+    .descript {
+        font-size: 16px !important;
+    }
+
+    .tech {
+        font-size: 16px !important;
+    }
+}

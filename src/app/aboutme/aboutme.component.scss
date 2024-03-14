@@ -99,3 +99,68 @@ span {
     color: $white;
     font-size: 16px;
 }
+
+@media screen and (max-width:1350px) {
+    h1 {
+        font-size: 65px !important;
+        text-align: left !important;
+    }
+
+    .my-image {
+        height: 547px !important;
+    }
+
+    .shadow-image {
+        height: 600px !important;
+    }
+
+    span {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width:1180px) {
+    .my-image {
+        height: 447px !important;
+    }
+
+    .shadow-image {
+        height: 500px !important;
+    }
+
+    span {
+        font-size: 12px !important;
+    }
+
+    .bulb-container {
+        >img {
+            width: 40px !important;
+        }
+    }
+
+    .puzzle-container {
+        >img {
+            width: 40px !important;
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-me-container {
+        flex-direction: column-reverse !important;
+    }
+    .wave {
+        top: -715px !important;
+    }
+    .my-image {
+        height: 547px !important;
+    }
+
+    .shadow-image {
+        height: 600px !important;
+    }
+
+    span {
+        font-size: 16px !important;
+    }
+}

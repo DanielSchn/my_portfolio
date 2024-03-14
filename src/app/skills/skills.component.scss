@@ -19,6 +19,7 @@ section {
             gap: 80px;
             width: 550px;
             margin-left: 64px;
+            margin-right: 40px;
 
             >.skillset-icons {
                 @include dFlex();
@@ -81,4 +82,79 @@ h1,
 p,
 span {
     color: $white;
+}
+
+@media screen and (max-width:1350px) {
+    .skillset-icons {
+        >img {
+            width: 50px !important;
+        }
+        >p {
+            font-size: 14px;
+        }
+    }
+
+    h1 {
+        font-size: 65px !important;
+    }
+
+    span {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width:1180px) {
+    .skill-icons-container {
+        gap: 60px !important;
+        width: 380px !important;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .skill-container {
+        flex-direction: column-reverse !important;
+        gap: 64px;
+    }
+
+    .skill-icons-container {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 550px !important;
+    }
+
+    span {
+        font-size: 16px !important;
+    }
+
+    .button-desktop {
+        display: none;
+    }
+
+    .button-responsive {
+        display: block;
+        >button {
+            height: 58px;
+            width: 200px;
+            border-radius: 10px;
+            background-color: $skyblue;
+            font-size: 23px;
+            color: $white;
+            cursor: pointer;
+
+            &:hover {
+                transition-duration: 250ms;
+                background-color: #4B47FF;
+                scale: 1.1;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1001px) {
+    .button-desktop {
+        display: block !important;
+    }
+    .button-responsive {
+        display: none !important;
+    }
 }

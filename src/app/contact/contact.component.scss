@@ -200,3 +200,55 @@ a {
     margin-top: -20px;
     color: $invalid;
 }
+
+@media screen and (max-width:1350px) {
+    span {
+        font-size: 14px !important;
+    }
+
+    h1 {
+        font-size: 65px !important;
+    }
+}
+
+@media screen and (max-width:1180px) {
+    form {
+        width: 500px !important;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .contact-form-text-area {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .contact-description {
+        max-width: 500px !important;
+    }
+
+    .contact-container {
+        margin-right: 0 !important;
+        margin-top: 32px !important;
+    }
+
+    .text-container {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .problem-container {
+        gap: 32px !important;
+    }
+
+    .input-textarea-styling {
+        width: 93% !important;
+    }
+
+    .contact-head {
+        >img {
+            width: 140px;
+            height: 4px;
+        }
+    }
+}
