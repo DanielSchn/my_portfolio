@@ -14,3 +14,18 @@ $checked: #183771;
 $bluegreen: #1CE6B6;
 $invalid: #E61C40;
 $valid: #70E61C;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'small' {
+        @media (max-width: 750px) { @content; }
+    }
+    @else if $breakpoint == 'medium' {
+        @media (max-width: 1000px) { @content; }
+    }
+    @else if $breakpoint == 'large' {
+        @media (max-width: 1180px) { @content; }
+    }
+    @else if $breakpoint == 'extra-large' {
+        @media (max-width: 1350px) { @content; }
+    }
+}
