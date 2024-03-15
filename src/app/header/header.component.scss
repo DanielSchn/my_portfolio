@@ -13,11 +13,17 @@ header {
     max-width: 1920px;
     width: 100%;
     @include dFlex(space-between);
+}
 
-    >img {
-        height: 50px;
-        margin-left: 80px;
-    }
+.logo {
+    height: 50px;
+    margin-left: 80px;
+}
+
+.burger-menu-button {
+    height: 32px;
+    width: 30px;
+    margin-right: 64px;
 }
 
 .navbar {
@@ -34,5 +40,31 @@ header {
         &:hover {
             color: $skyblue;
         }
+    }
+}
+
+.navbar-burger {
+    background-color: rgba($color: $darkblue, $alpha: 0.7);
+    @include dFlex();
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    
+
+    >a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+@include respond-to('extra-small') {
+    .navbar {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 64px;
     }
 }
