@@ -7,33 +7,32 @@ header {
     background-color: $darkblue;
     z-index: 999;
     height: 104px;
+}
 
-    >div {
-        
-        max-width: 1920px;
-        width: 100%;
-        @include dFlex(space-between);
-        
-        >img {
-            height: 50px;
-            margin-left: 80px;
-        }
+.header-container {
+    max-width: 1920px;
+    width: 100%;
+    @include dFlex(space-between);
 
-        >div {
-            display: flex;
-            flex-direction: row;
-            margin-right: 80px;
-            gap: 29px;
+    >img {
+        height: 50px;
+        margin-left: 80px;
+    }
+}
 
-            >a {
-                color: $white;
-                font-size: 23px;
-                text-decoration: none;
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin-right: 80px;
+    gap: 29px;
 
-                &:hover {
-                    color: $skyblue;
-                }
-            }
+    >a {
+        color: $white;
+        font-size: 23px;
+        text-decoration: none;
+
+        &:hover {
+            color: $skyblue;
         }
     }
 }

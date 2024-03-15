@@ -16,7 +16,10 @@ $invalid: #E61C40;
 $valid: #70E61C;
 
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == 'small' {
+    @if $breakpoint == 'extra-small' {
+        @media (max-width: 650px) { @content; }
+    }
+    @else if $breakpoint == 'small' {
         @media (max-width: 750px) { @content; }
     }
     @else if $breakpoint == 'medium' {

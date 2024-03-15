@@ -10,13 +10,6 @@ section {
     width: 640px;
     z-index: 10;
     margin-left: 64px;
-
-    h1 {
-        font-size: 90px;
-        color: $white;
-        text-align: center;
-        margin-bottom: 40px;
-    }
 }
 
 .bulb-container {
@@ -93,6 +86,13 @@ section {
     max-width: 1920px;
 }
 
+h1 {
+    font-size: 90px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 span {
     color: $white;
     font-size: 16px;
@@ -100,71 +100,78 @@ span {
 
 @include respond-to('extra-large') {
     h1 {
-        font-size: 65px !important;
-        text-align: left !important;
+        font-size: 65px;
+        text-align: left;
     }
 
     .my-image {
-        height: 547px !important;
+        height: 547px;
     }
 
     .shadow-image {
-        height: 600px !important;
+        height: 600px;
     }
 
     span {
-        font-size: 14px !important;
+        font-size: 14px;
     }
 }
 
 @include respond-to('large') {
     .my-image {
-        height: 447px !important;
+        height: 447px;
     }
 
     .shadow-image {
-        height: 500px !important;
+        height: 500px;
     }
 
     span {
-        font-size: 12px !important;
+        font-size: 12px;
     }
 
     .bulb-container {
         >img {
-            width: 40px !important;
+            width: 40px;
         }
     }
 
     .puzzle-container {
         >img {
-            width: 40px !important;
+            width: 40px;
         }
     }
 }
 
 @include respond-to('medium') {
     .about-me-container {
-        flex-direction: column-reverse !important;
+        flex-direction: column-reverse;
     }
 
     .wave {
-        top: -715px !important;
+        top: -715px;
     }
 
     .my-image {
-        height: 547px !important;
+        height: 547px;
     }
 
     .shadow-image {
-        height: 600px !important;
+        height: 600px;
     }
 
     span {
-        font-size: 16px !important;
+        font-size: 16px;
     }
 }
 
 @include respond-to('small') {
-    
+    span {
+        // font-size: 14px;
+    }
+
+    .about-me {
+        margin-left: 0;
+        width: 530px;
+    }
 }
