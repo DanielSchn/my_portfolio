@@ -174,4 +174,52 @@ span {
         margin-left: 0;
         width: 530px;
     }
+
+    .wave {
+        top: -845px;
+    }
+}
+
+@include respond-to('extra-small') {
+    section {
+        margin-bottom: 250px;
+    }
+    
+    .my-image {
+        height: 400px;
+    }
+
+    .shadow-image {
+        height: 480px;
+    }
+
+    .wave {
+        top: -1000px;
+        height: 160px;
+    }
+
+    .about-me {
+        width: 95%;
+        margin-left: 8px;
+
+        >h1 {
+            font-size: 45px;
+        }
+    }
+    
+    .bulb-container {
+
+        >span {
+            padding-right: 0;
+            margin-left: 32px;
+        }
+    }
+
+    .puzzle-container {
+
+        >span {
+            padding-right: 0;
+            margin-left: 32px;
+        }
+    }
 }

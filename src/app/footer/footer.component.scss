@@ -98,3 +98,9 @@ p {
         display: block;
     }
 }
+
+@include respond-to('extra-small') {
+    .shadow {
+        height: 750px;
+    }
+}

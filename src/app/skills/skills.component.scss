@@ -19,12 +19,12 @@ section {
     flex-direction: column;
     justify-content: start;
     gap: 40px;
+}
 
-    >.skills-line-container {
-        display: flex;
-        align-items: center;
-        gap: 64px;
-    }
+.skills-line-container {
+    display: flex;
+    align-items: center;
+    gap: 64px;
 }
 
 .skill-icons-container {
@@ -163,5 +163,51 @@ span {
 
     .button-responsive {
         display: none;
+    }
+}
+
+@include respond-to('extra-small'){
+    .skills-line-container {
+        justify-content: center;
+        gap: 16px;
+
+        >h1 {
+            font-size: 45px;
+        }
+        >img {
+            width: 130px;
+            height: 4px;
+            border-radius: 4px;
+        }
+    }
+
+    .text-container {
+        align-items: end;
+
+        >span {
+            width: 90%;
+        }
+    }
+
+    .skill-icons-container {
+        width: 90%;
+        gap: 50px;
+    }
+
+    .skillset-icons {
+        width: 45px;
+
+        >img {
+            width: 45px;
+        }
+    }
+
+    .button-responsive {
+
+        >button {
+            width: 158px;
+            height: 49px;
+            font-size: 16px;
+        }
     }
 }

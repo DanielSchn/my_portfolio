@@ -4,176 +4,173 @@
 section {
     @include dFlex();
     width: 100%;
-
-    >.portfolio-container {
-        width: 100%;
-        max-width: 1920px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        >.shadow-right {
-            position: absolute;
-            height: 912px;
-            right: -0;
-            z-index: 0;
-        }
-
-        >.shadow-left {
-            position: absolute;
-            height: 912px;
-            left: 0;
-            bottom: -3220px;
-        }
-
-
-        >.portfolio-headline {
-            width: 100%;
-            @include dFlex(start);
-            flex-direction: row;
-            gap: 32px;
-
-            >.text-portfolio {
-                >h1 {
-                    font-size: 90px;
-                    margin-bottom: 32px;
-                }
-            }
-        }
-
-        >.enumeration-position {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 64px;
-
-            >.enumeration-container {
-                @include dFlex();
-                flex-wrap: wrap;
-                width: 1300px;
-                gap: 32px;
-
-
-                >.portfolio {
-                    width: 600px;
-                    height: 600px;
-                    border: 1px solid $skyblue;
-                    border-radius: 10px;
-                    @include dFlex();
-                    flex-direction: column;
-                    overflow: hidden;
-                    background-color: $darkblue;
-                    z-index: 1;
-
-                    &:hover {
-
-
-                        >.portfolio-image {
-
-                            >img {
-                                scale: 1.75;
-                                z-index: 0;
-                                transition: ease-in-out 150ms;
-                            }
-                        }
-
-                        >.buttons {
-                            display: flex;
-                        }
-
-                        >.popup {
-                            display: block;
-                        }
-
-
-
-                    }
-
-                    >.portfolio-image {
-
-                        >img {
-                            width: 500px;
-                            z-index: 0;
-
-                        }
-                    }
-
-                    >.buttons {
-                        display: none;
-                        position: absolute;
-                        z-index: 50;
-                        gap: 64px;
-
-                        >a {
-                            font-size: 23px;
-                            color: $white;
-
-                            >.btn1 {
-                                cursor: pointer;
-                                width: 137px;
-                                height: 58px;
-                                border: 1px solid $skyblue;
-                                border-radius: 10px;
-                                background-color: unset;
-                                font-size: 23px;
-                                color: $white;
-                            }
-
-                            >.btn2 {
-                                cursor: pointer;
-                                width: 137px;
-                                height: 58px;
-                                border-radius: 10px;
-                                background-color: $purple;
-                                font-size: 23px;
-                                color: $white;
-                            }
-                        }
-
-                    }
-
-                    >.popup {
-                        display: none;
-                        height: 250px;
-                        width: 100%;
-                        background-color: $white;
-                        border-radius: 10px;
-                        z-index: 500;
-
-                        >.portfolio-description {
-                            @include dFlex();
-                            flex-direction: column;
-
-
-                            >h1 {
-                                color: $purple;
-                                font-size: 32px;
-                            }
-
-                            >.descript {
-                                color: $black;
-                                font-size: 23px;
-                                text-align: center;
-                                margin-bottom: 8px;
-                            }
-
-                            >.tech {
-                                color: $skyblue;
-                                font-size: 23px;
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-    }
 }
 
 h1,
 span,
 p {
     color: $white;
+}
+
+.portfolio-container {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: none;
+    position: absolute;
+    z-index: 50;
+    gap: 64px;
+
+    >a {
+        font-size: 23px;
+        color: $white;
+    }
+}
+
+.text-portfolio {
+    @include dFlex(center, center);
+    gap: 40px;
+    margin-top: 64px;
+
+    >h1 {
+        font-size: 90px;
+        margin: 0
+    }
+}
+
+.enumeration-container {
+    @include dFlex();
+    flex-wrap: wrap;
+    width: 1300px;
+    gap: 32px;
+}
+
+.portfolio-headline {
+    width: 100%;
+    @include dFlex(center, start);
+    flex-direction: column;
+    gap: 32px;
+
+    >span {
+        margin-left: 92px;
+    }
+}
+
+.enumeration-position {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 64px;
+}
+
+.tech {
+    color: $skyblue;
+    font-size: 23px;
+}
+
+.descript {
+    color: $black;
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.portfolio-description {
+    @include dFlex();
+    flex-direction: column;
+
+    >h1 {
+        color: $purple;
+        font-size: 32px;
+    }
+}
+
+.shadow-left {
+    position: absolute;
+    height: 912px;
+    left: 0;
+    bottom: -3220px;
+}
+
+.shadow-right {
+    position: absolute;
+    height: 912px;
+    right: -0;
+    z-index: 0;
+}
+
+.portfolio-image {
+
+    >img {
+        width: 500px;
+        z-index: 0;
+    }
+}
+
+.popup {
+    display: none;
+    height: 250px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 10px;
+    z-index: 500;
+}
+
+.btn1 {
+    cursor: pointer;
+    width: 137px;
+    height: 58px;
+    border: 1px solid $skyblue;
+    border-radius: 10px;
+    background-color: unset;
+    font-size: 23px;
+    color: $white;
+}
+
+.btn2 {
+    cursor: pointer;
+    width: 137px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: $purple;
+    font-size: 23px;
+    color: $white;
+}
+
+.portfolio {
+    width: 600px;
+    height: 600px;
+    border: 1px solid $skyblue;
+    border-radius: 10px;
+    @include dFlex();
+    flex-direction: column;
+    overflow: hidden;
+    background-color: $darkblue;
+    z-index: 1;
+
+    &:hover {
+        >.portfolio-image {
+
+            >img {
+                scale: 1.75;
+                z-index: 0;
+                transition: ease-in-out 150ms;
+            }
+        }
+
+        >.buttons {
+            display: flex;
+        }
+
+        >.popup {
+            display: block;
+        }
+    }
 }
 
 @media screen and (min-width: 1921px) {
@@ -186,27 +183,27 @@ p {
     }
 }
 
-@media screen and (max-width:1350px) {
+@include respond-to('extra-large') {
     .text-portfolio {
         >h1 {
-            font-size: 65px !important;
+            font-size: 65px;
         }
 
         >span {
-            font-size: 14px !important;
+            font-size: 14px;
         }
     }
 }
 
-@media screen and (max-width:1000px) {
+@include respond-to('medium') {
     .portfolio {
-        width: 500px !important;
-        height: 500px !important;
+        width: 500px;
+        height: 500px;
 
         &:hover {
             >.portfolio-image {
                 >img {
-                    scale: 1.4 !important;
+                    scale: 1.4;
                 }
             }
         }
@@ -214,15 +211,86 @@ p {
 
     .portfolio-description {
         h1 {
-            font-size: 26px !important;
+            font-size: 26px;
         }
     }
 
     .descript {
-        font-size: 16px !important;
+        font-size: 16px;
     }
 
     .tech {
-        font-size: 16px !important;
+        font-size: 16px;
+    }
+}
+
+@include respond-to('extra-small') {
+    .text-portfolio {
+        gap: 16px;
+
+        >h1 {
+            font-size: 45px;
+            z-index: 5;
+        }
+
+        >img {
+            width: 20px;
+            height: 4px;
+            border-radius: 4px;
+        }
+    }
+
+    .portfolio-headline {
+
+        >span {
+            margin-left: 36px;
+            z-index: 500;
+        }
+    }
+
+    .portfolio-image {
+        >img {
+            width: 250px;
+        }
+    }
+
+    .portfolio {
+        width: 280px;
+        height: 280px;
+
+        &:hover {
+            >.portfolio-image {
+                >img {
+                    scale: 1.2;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        gap: 32px;
+    }
+
+    .btn1,
+    .btn2 {
+        width: 100px;
+        height: 49px;
+        font-size: 20px;
+    }
+
+    .portfolio-description {
+        >h1 {
+            margin: 0;
+        }
+    }
+
+    .descript, .tech {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .shadow-left,
+    .shadow-right {
+        height: 500px;
     }
 }

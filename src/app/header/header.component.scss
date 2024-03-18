@@ -38,8 +38,24 @@ header {
     }
 }
 
+.language-selector {
+    display: flex;
+    gap: 8px;
+
+    >p {
+        font-size: 23px;
+        color: $white;
+    }
+}
+
+.english {
+    border-bottom: 2px solid $skyblue;
+    border-radius: 1px;
+}
+
 .navbar {
     display: flex;
+    align-items: center;
     flex-direction: row;
     margin-right: 80px;
     gap: 29px;
@@ -53,6 +69,10 @@ header {
             color: $skyblue;
         }
     }
+}
+
+.d-none {
+    display: none !important;
 }
 
 .navbar-burger {
@@ -70,6 +90,12 @@ header {
         color: $white;
         text-decoration: none;
         font-size: 23px;
+    }
+}
+
+@media (min-width: 651px) {
+    .burger-menu-button {
+        display: none;
     }
 }
 

@@ -88,6 +88,20 @@ section {
     }
 }
 
+@include respond-to('medium') {
+    .shadow-left,
+    .shadow-right {
+        height: 700px;
+    }
+}
+
+@include respond-to('small') {
+    .shadow-left,
+    .shadow-right {
+        height: 600px;
+    }
+}
+
 @include respond-to('extra-small') {
     .shadow-left,
     .shadow-right {

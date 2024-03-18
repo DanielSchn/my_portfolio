@@ -44,3 +44,14 @@ section {
     align-items: center;
     gap: 42px;
 }
+
+@include respond-to('extra-small') {
+    .vector-contact {
+        border-radius: 4px;
+        width: 50px;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
