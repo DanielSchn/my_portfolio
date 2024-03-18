@@ -10,21 +10,16 @@
                 <p>|</p>
                 <p class="english">EN</p>
             </div>
-
         </div>
-        <!-- <img class="burger-menu-button" src="./assets/img/icons/burger_menu.png" alt="Burger"> -->
-        <!-- <img class="burger-menu-button" src="./assets/img/icons/burger_menu.png" alt="Burger" (click)="toggleNavbar()"> -->
-        <!-- <img class="burger-menu-button" [class.d-none]="!navbarHidden" src="./assets/img/icons/burger_menu.png"
-            alt="Burger" (click)="toggleNavbar($event)"> -->
-        <img *ngIf="navbarHidden" class="burger-menu-button" src="./assets/img/icons/burger_menu.png" alt="Menu Open"
-            (click)="toggleNavbar($event)">
-        <img *ngIf="!navbarHidden" class="burger-menu-button" src="./assets/img/icons/burger_menu_close.png" alt="Menu Close"
-            (click)="toggleNavbar($event)">
-
+        <div class="burger-button">
+            <img class="burger-menu-button" src="./assets/img/icons/burger_menu.png" alt="Menu Open"
+                (click)="toggleNavbar($event)" [class.show]="navbarHidden">
+            <img class="burger-menu-button" src="./assets/img/icons/burger_menu_close.png" alt="Menu Close"
+                (click)="toggleNavbar($event)" [class.show]="!navbarHidden">
+        </div>
     </div>
-
 </header>
-<div class="navbar-burger" [class.d-none]="navbarHidden">
+<div class="navbar-burger" [class.animate]="!navbarHidden">
     <a href="#about-me" (click)="closeNavbar()">About me</a>
     <a href="#my-skills" (click)="closeNavbar()">Skills</a>
     <a href="#portfolio" (click)="closeNavbar()">Portfolio</a>
