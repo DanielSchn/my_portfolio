@@ -2,9 +2,9 @@
     <div class="header-container">
         <img class="logo" src="./assets/img/ds_logo_color.svg" alt="Daniel Schneider Logo">
         <div class="navbar">
-            <a href="#about-me">About me</a>
-            <a href="#my-skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">About me</a>
+            <a href="#my-skills" (click)="scrollToElement('my-skills', -110); $event.preventDefault()">Skills</a>
+            <a href="#portfolio" (click)="scrollToElement('portfolio', -20); $event.preventDefault()">Portfolio</a>
             <div class="language-selector">
                 <p class="german">DE</p>
                 <p>|</p>
@@ -20,9 +20,9 @@
     </div>
 </header>
 <div class="navbar-burger" [class.animate]="!navbarHidden">
-    <a href="#about-me" (click)="closeNavbar()">About me</a>
-    <a href="#my-skills" (click)="closeNavbar()">Skills</a>
-    <a href="#portfolio" (click)="closeNavbar()">Portfolio</a>
+    <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">About me</a>
+    <a href="#my-skills" (click)="scrollToElement('my-skills', -120); $event.preventDefault()">Skills</a>
+    <a href="#portfolio" (click)="scrollToElement('portfolio', -60); $event.preventDefault()">Portfolio</a>
     <div class="language-selector-mobile" (click)="closeNavbar()">
         <p>DE</p>
         <p>|</p>

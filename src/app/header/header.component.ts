@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
 
 
 @Component({
@@ -9,20 +8,9 @@ import { animate, style, transition, trigger } from '@angular/animations';
   imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  animations: [
-    trigger('fade', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('0.5s', style({ opacity: 1 }))
-      ]),
-      transition('leave', [
-        animate('0.5s', style({ opacity: 0 }))
-      ])
-    ])
-  ],
 })
 export class HeaderComponent {
-  navbarHidden =  true;
+  navbarHidden = true;
 
 
   ngOnInit() {
@@ -34,7 +22,7 @@ export class HeaderComponent {
     document.body.removeEventListener('click', this.closeNavbar.bind(this));
   }
 
-  
+
   toggleNavbar(event: MouseEvent) {
     event.stopPropagation();
     this.navbarHidden = !this.navbarHidden;
@@ -43,5 +31,15 @@ export class HeaderComponent {
 
   closeNavbar() {
     this.navbarHidden = true;
+  }
+
+  
+  scrollToElement(elementId: string, yOffset: number): void {
+    this.closeNavbar();
+    const element = document.getElementById(elementId);
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   }
 }

@@ -120,7 +120,8 @@ header {
 }
 
 @media (min-width: 651px) {
-    .burger-menu-button {
+    .burger-menu-button,
+    .burger-button {
         display: none;
     }
 }
