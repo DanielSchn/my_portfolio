@@ -69,23 +69,19 @@ section {
 .shadow-left {
     height: 912px;
     position: absolute;
-    left: 0;
+    left: -400px;
 }
 
 .shadow-right {
     height: 912px;
     position: absolute;
-    right: 0;
+    right: -400px;
 }
 
-@media (min-width: 1921px) {
-    .shadow-left {
-        left: calc((100vw - 1920px) / 2 - 3px);
-    }
-
-    .shadow-right {
-        right: calc((100vw - 1920px) / 2 - 3px);
-    }
+@media (max-height: 770px) {
+ section {
+    margin-top: 64px;
+ }
 }
 
 @include respond-to('medium') {
@@ -106,6 +102,14 @@ section {
     .shadow-left,
     .shadow-right {
         height: 400px;
+    }
+
+    .shadow-left {
+        left: -250px;
+    }
+
+    .shadow-right {
+        right: -270px;
     }
 
     .contact-button {

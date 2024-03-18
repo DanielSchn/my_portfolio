@@ -1,8 +1,8 @@
 @import "../../mixin.scss";
 
-
 section {
-    @include dFlex();
+    position: relative;
+    // @include dFlex();
     width: 100%;
 }
 
@@ -12,7 +12,26 @@ p {
     color: $white;
 }
 
+.portfolio-line {
+    position: absolute;
+    left: -100vw;
+    /* Setzt das Bild links außerhalb des sichtbaren Bereichs */
+    width: 100vw;
+    /* Stellt sicher, dass das Bild bis zum linken Bildschirmrand reicht */
+    height: 4px;
+    /* Erhält das Seitenverhältnis */
+}
+
+.text-portfolio-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
 .portfolio-container {
+    margin: 0 auto;
     width: 100%;
     max-width: 1920px;
     display: flex;
@@ -33,13 +52,14 @@ p {
 }
 
 .text-portfolio {
-    @include dFlex(center, center);
-    gap: 40px;
-    margin-top: 64px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
 
     >h1 {
         font-size: 90px;
-        margin: 0
+        margin-left: 16px;
     }
 }
 
@@ -51,14 +71,19 @@ p {
 }
 
 .portfolio-headline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
-    @include dFlex(center, start);
-    flex-direction: column;
-    gap: 32px;
+    max-width: 1920px;
+    margin-left: auto;
+    /* Sorgt dafür, dass der Inhalt linksbündig mit einem Abstand zum linken Rand ist */
+    position: relative;
 
-    >span {
-        margin-left: 92px;
-    }
+}
+
+.description {
+    margin-left: 64px;
 }
 
 .enumeration-position {
@@ -93,14 +118,15 @@ p {
 .shadow-left {
     position: absolute;
     height: 912px;
-    left: 0;
-    bottom: -3220px;
+    left: -500px;
+    // bottom: -3220px;
+    top: 1000px;
 }
 
 .shadow-right {
     position: absolute;
     height: 912px;
-    right: -0;
+    right: -450px;
     z-index: 0;
 }
 
@@ -173,20 +199,28 @@ p {
     }
 }
 
-@media screen and (min-width: 1921px) {
-    .shadow-left {
-        left: calc((100vw - 1920px) / 2 - 3px) !important;
+@media (min-width: 1921px) {
+    .portfolio-line-responsive {
+        display: none;
     }
 
-    .shadow-right {
-        right: calc((100vw - 1920px) / 2 - 3px) !important;
+    .text-portfolio {
+        >h1 {
+            margin-left: 64px;
+        }
     }
+
 }
 
 @include respond-to('extra-large') {
+    .portfolio-line {
+        display: none;
+    }
+
     .text-portfolio {
         >h1 {
             font-size: 65px;
+            margin-left: 16px;
         }
 
         >span {
@@ -284,7 +318,8 @@ p {
         }
     }
 
-    .descript, .tech {
+    .descript,
+    .tech {
         font-size: 14px;
         margin-bottom: 0;
     }

@@ -1,7 +1,16 @@
 @import '../../mixin.scss';
 
 section {
+    position: relative;
     @include dFlex();
+    width: 100%;
+}
+
+.vector-contact-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1920px;
     width: 100%;
 }
 
@@ -9,8 +18,8 @@ section {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1920px;
     z-index: 5;
+    margin-left: 64px;
 }
 
 .scroll-down {
@@ -35,8 +44,12 @@ section {
 }
 
 .vector-contact {
+    position: absolute;
+    left: 0;
+    width: calc(50vw - 960px);
+    top: 50%;
+    transform: translateY(-50%);
     height: 4px;
-    width: 100px;
 }
 
 .contact-left {
@@ -45,10 +58,28 @@ section {
     gap: 42px;
 }
 
+@media (max-height: 770px) {
+    section {
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .vector-contact-responsive {
+        display: none;
+    }
+}
+
+@include respond-to('extra-large') {
+    // .vector-contact-responsive {
+    //     display: none;
+    // }
+}
+
 @include respond-to('extra-small') {
-    .vector-contact {
-        border-radius: 4px;
+    .vector-contact-responsive {
         width: 50px;
+        height: 4px;
     }
 
     .scroll-down {

@@ -3,7 +3,7 @@
 section {
     width: 100%;
     position: relative;
-    margin-top: -350px;
+    margin-top: 100px;
     z-index: 100;
     @include dFlex();
 }
@@ -17,14 +17,22 @@ section {
 .text-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    gap: 40px;
+    align-items: center;
+    max-width: 1920px;
+    // margin-right: 64px;
+
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: start;
+    // gap: 40px;
 }
 
 .skills-line-container {
-    display: flex;
-    align-items: center;
-    gap: 64px;
+    @include dFlex(flex-start);
+    width: 100%;
+    position: relative;
+
+    // gap: 64px;
 }
 
 .skill-icons-container {
@@ -49,6 +57,14 @@ section {
     }
 }
 
+.skill-vector {
+    height: 4px;
+    position: absolute;
+    right: -100vw;
+    width: 100vw;
+    z-index: 1;
+}
+
 .button-desktop,
 .button-responsive {
     >button {
@@ -59,6 +75,7 @@ section {
         font-size: 23px;
         color: $white;
         cursor: pointer;
+        margin-top: 64px;
 
         &:hover {
             transition-duration: 250ms;
@@ -75,16 +92,36 @@ span {
 }
 
 h1 {
+    position: relative;
+    z-index: 2;
     font-size: 90px;
     margin: 0;
+    margin-right: 16px;
 }
 
 span {
     font-size: 16px;
+    margin-right: 64px;
+}
+
+@media (min-width: 1921px) {
+    .skill-vector-responsive {
+        display: none;
+    }
 }
 
 // max-width:1350px
 @include respond-to('extra-large') {
+    .skill-vector {
+        display: none;
+    }
+
+    .skill-vector-responsive {
+        height: 4px;
+        margin-left: 16px;
+
+    }
+
     .skillset-icons {
         width: 50px;
 
@@ -166,7 +203,7 @@ span {
     }
 }
 
-@include respond-to('extra-small'){
+@include respond-to('extra-small') {
     .skills-line-container {
         justify-content: center;
         gap: 16px;
@@ -174,6 +211,7 @@ span {
         >h1 {
             font-size: 45px;
         }
+
         >img {
             width: 130px;
             height: 4px;
@@ -186,6 +224,7 @@ span {
 
         >span {
             width: 90%;
+            margin-right: 0;
         }
     }
 

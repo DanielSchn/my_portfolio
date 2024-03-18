@@ -17,6 +17,7 @@ textarea::placeholder {
 
 h1 {
     font-size: 90px;
+    margin-right: 64px;
 }
 
 a {
@@ -36,10 +37,26 @@ form {
 }
 
 .contact-head {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; // Inhalte am rechten Ende ausrichten
+    align-items: center; // Vertikale Ausrichtung der Inhalte
     width: 100%;
     max-width: 1920px;
-    @include dFlex(end);
-    gap: 32px;
+    box-sizing: border-box;
+
+    // width: 100%;
+    // max-width: 1920px;
+    // @include dFlex(end);
+    // gap: 32px;
+}
+
+.vector-line {
+    height: 4px;
+    position: absolute;
+    right: -100vw;
+    width: 100vw;
+    z-index: 1;
 }
 
 .contact-description {
@@ -201,7 +218,17 @@ form {
     background-color: $grey;
 }
 
+@media (min-width: 1921px) {
+    .vector-line-responsive {
+        display: none;
+    }
+}
+
 @include respond-to('extra-large') {
+    .vector-line {
+        display: none;
+    }
+
     span {
         font-size: 14px;
     }

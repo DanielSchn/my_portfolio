@@ -1,6 +1,7 @@
 @import '../../mixin.scss';
 
 section {
+    position: relative;
     width: 100%;
     @include dFlex();
     flex-direction: column;
@@ -73,10 +74,9 @@ section {
 
 .wave {
     width: 100%;
-    max-width: 1920px;
     height: 500px;
-    position: relative;
-    top: -142px;
+    position: absolute;
+    top: 615px;
     z-index: 6;
 }
 
@@ -115,6 +115,10 @@ span {
     span {
         font-size: 14px;
     }
+
+    .wave {
+        top: 480px;
+    }
 }
 
 @include respond-to('large') {
@@ -141,6 +145,10 @@ span {
             width: 40px;
         }
     }
+
+    .wave {
+        top: 390px;
+    }
 }
 
 @include respond-to('medium') {
@@ -149,7 +157,7 @@ span {
     }
 
     .wave {
-        top: -715px;
+        top: 460px;
     }
 
     .my-image {
@@ -176,7 +184,7 @@ span {
     }
 
     .wave {
-        top: -845px;
+        top: 470px;
     }
 }
 
@@ -194,7 +202,7 @@ span {
     }
 
     .wave {
-        top: -1000px;
+        top: 400px;
         height: 160px;
     }
 
