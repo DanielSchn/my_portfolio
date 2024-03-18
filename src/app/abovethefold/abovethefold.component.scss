@@ -101,15 +101,17 @@ section {
 @include respond-to('extra-small') {
     .shadow-left,
     .shadow-right {
-        height: 400px;
+        display: none;
     }
 
-    .shadow-left {
-        left: -250px;
+    .shadow-right-mobile {
+        position: absolute;
+        right: 0;
     }
 
-    .shadow-right {
-        right: -270px;
+    .shadow-left-mobile {
+        position: absolute;
+        left: 0;
     }
 
     .contact-button {

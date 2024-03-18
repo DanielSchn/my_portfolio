@@ -326,6 +326,15 @@ p {
 
     .shadow-left,
     .shadow-right {
-        height: 500px;
+        display: none;
+    }
+
+    .shadow-right-mobile {
+        position: absolute;
+        right: 0;
+    }
+
+    section {
+        margin-bottom: 64px;
     }
 }

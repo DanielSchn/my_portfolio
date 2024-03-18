@@ -272,22 +272,19 @@ form {
         width: 93%;
     }
 
-    .contact-head {
-        >img {
-            width: 140px;
-            height: 4px;
-        }
+    .vector-line-responsive {
+        width: 140px;
+        height: 4px;
     }
 }
 
 @include respond-to('extra-small') {
     .contact-head {
         gap: 16px;
+
         >h1 {
             font-size: 45px;
-        }
-        >img {
-            width: 82px;
+            margin-right: 16px;
         }
     }
 
@@ -298,9 +295,10 @@ form {
             font-size: 20px;
         }
     }
+
     a {
-            color: $skyblue;
-        }
+        color: $skyblue;
+    }
 
     .text-container {
         max-width: 90%;
@@ -320,5 +318,11 @@ form {
         width: 195px;
         height: 49px;
         font-size: 16px;
+    }
+
+    .vector-line-responsive {
+        width: 64px;
+        height: 4px;
+        border-radius: 4px;
     }
 }

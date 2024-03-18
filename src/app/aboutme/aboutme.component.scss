@@ -190,7 +190,7 @@ span {
 
 @include respond-to('extra-small') {
     section {
-        margin-bottom: 250px;
+        margin-bottom: 120px;
     }
     
     .my-image {
@@ -199,6 +199,7 @@ span {
 
     .shadow-image {
         height: 480px;
+        width: 100%;
     }
 
     .wave {
