@@ -259,6 +259,10 @@ p {
 }
 
 @include respond-to('extra-small') {
+    .description {
+        margin-left: 16px;
+    }
+
     .text-portfolio {
         gap: 16px;
 
