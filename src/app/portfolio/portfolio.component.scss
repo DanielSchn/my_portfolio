@@ -338,3 +338,9 @@ p {
         margin-bottom: 64px;
     }
 }
+
+@media (min-width: 651px) {
+    .shadow-right-mobile {
+        display: none;
+    }
+}

@@ -123,3 +123,10 @@ section {
     }
 
 }
+
+@media (min-width: 651px) {
+    .shadow-right-mobile,
+    .shadow-left-mobile {
+        display: none;
+    }
+}

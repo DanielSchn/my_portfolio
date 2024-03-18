@@ -111,3 +111,9 @@ p {
         bottom: 150px;
     }
 }
+
+@media (min-width: 651px) {
+    .shadow-mobile {
+        display: none;
+    }
+}
