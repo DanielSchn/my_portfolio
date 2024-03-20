@@ -24,8 +24,8 @@
     <a href="#my-skills" (click)="scrollToElement('my-skills', -120); $event.preventDefault()">Skills</a>
     <a href="#portfolio" (click)="scrollToElement('portfolio', -60); $event.preventDefault()">Portfolio</a>
     <div class="language-selector-mobile" (click)="closeNavbar()">
-        <p>DE</p>
-        <p>|</p>
-        <p>EN</p>
+        <p class="language" [class.active]="translate.currentLang === 'de'" (click)="switchLanguage('de')">DE</p>
+        <p class="line">|</p>
+        <p class="language" [class.active]="translate.currentLang === 'en'" (click)="switchLanguage('en')">EN</p>
     </div>
 </div>
