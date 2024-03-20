@@ -7,6 +7,8 @@ section {
 }
 
 .above-the-fold-container {
+    position: relative;
+    width: 100%;
     max-width: 1920px;
     @include dFlex();
     flex-direction: column;
@@ -69,13 +71,13 @@ section {
 .shadow-left {
     height: 912px;
     position: absolute;
-    left: -400px;
+    left: -225px;
 }
 
 .shadow-right {
     height: 912px;
     position: absolute;
-    right: -400px;
+    right: -225px;
 }
 
 @media (max-height: 770px) {

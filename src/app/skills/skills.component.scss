@@ -60,10 +60,8 @@ section {
 
 .skill-vector {
     height: 4px;
-    position: absolute;
-    right: -85vw;
-    width: 100vw;
-    z-index: 1;
+    width: 100%;
+    border-radius: 4px;
 }
 
 .button-desktop,
@@ -105,30 +103,7 @@ span {
     margin-right: 64px;
 }
 
-@media (min-width: 1921px) {
-    .skill-vector-responsive {
-        display: none;
-    }
-}
-
-@media (max-width: 1920px) {
-    .skill-vector {
-        display: none;
-    }
-}
-
-// max-width:1350px
 @include respond-to('extra-large') {
-    .skill-vector {
-        display: none;
-    }
-
-    .skill-vector-responsive {
-        height: 4px;
-        margin-left: 16px;
-
-    }
-
     .skillset-icons {
         width: 50px;
 
@@ -150,7 +125,6 @@ span {
     }
 }
 
-// max-width:1180px
 @include respond-to('large') {
     .skill-icons-container {
         gap: 60px;
@@ -158,7 +132,6 @@ span {
     }
 }
 
-// max-width:1000px
 @include respond-to ('medium') {
     .skill-container {
         flex-direction: column-reverse;

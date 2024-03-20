@@ -53,10 +53,8 @@ form {
 
 .vector-line {
     height: 4px;
-    position: absolute;
-    right: -100vw;
-    width: 100vw;
-    z-index: 1;
+    width: 504px;
+    border-radius: 4px;
 }
 
 .contact-description {
@@ -93,6 +91,19 @@ form {
     @include dFlex();
     flex-direction: column;
     z-index: 500;
+    position: relative;
+}
+
+.shadow {
+    height: 912px;
+    bottom: -350px;
+    position: absolute;
+    right: -235px;
+    z-index: -1;
+}
+
+.shadow-mobile {
+    display: none;
 }
 
 .contact-form-text-area {
@@ -218,17 +229,7 @@ form {
     background-color: $grey;
 }
 
-@media (min-width: 1921px) {
-    .vector-line-responsive {
-        display: none;
-    }
-}
-
 @include respond-to('extra-large') {
-    .vector-line {
-        display: none;
-    }
-
     span {
         font-size: 14px;
     }
@@ -276,13 +277,24 @@ form {
         width: 93%;
     }
 
-    .vector-line-responsive {
+    .vector-line {
         width: 140px;
-        height: 4px;
     }
 }
 
 @include respond-to('extra-small') {
+    .shadow {
+        display: none;
+    }
+
+    .shadow-mobile {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -200px;
+        z-index: -1;
+    }
+
     .contact-head {
         gap: 16px;
 
@@ -320,9 +332,7 @@ form {
         font-size: 16px;
     }
 
-    .vector-line-responsive {
+    .vector-line {
         width: 64px;
-        height: 4px;
-        border-radius: 4px;
     }
 }

@@ -4,7 +4,16 @@ section {
     @include dFlex();
     margin-top: 64px;
     height: 291px;
-    position: relative;
+    width: 100%
+}
+
+.footer-background {
+    width: 100%;
+    border-top: 4px solid $skyblue;
+    background-color: $darkblue;
+    @include dFlex();
+    height: 291px;
+    z-index: 999;
 }
 
 .footer-container {
@@ -12,7 +21,6 @@ section {
     width: 100%;
     max-width: 1920px;
     height: 291px;
-    z-index: 500;
 }
 
 p,
@@ -63,23 +71,6 @@ p {
     }
 }
 
-.footer-background {
-    width: 100%;
-    border-top: 4px solid $skyblue;
-    background-color: $darkblue;
-    @include dFlex();
-    height: 291px;
-    z-index: 500;
-}
-
-.shadow {
-    height: 912px;
-    bottom: 0;
-    position: absolute;
-    right: -150px;
-    z-index: 0;
-}
-
 @include respond-to('small') {
     .footer-container {
         @include dFlex();
@@ -97,23 +88,5 @@ p {
 
     .imprint-link-mobile {
         display: block;
-    }
-}
-
-@include respond-to('extra-small') {
-    .shadow {
-        display: none;
-    }
-
-    .shadow-mobile {
-        position: absolute;
-        right: 0;
-        bottom: 150px;
-    }
-}
-
-@media (min-width: 651px) {
-    .shadow-mobile {
-        display: none;
     }
 }

@@ -43,19 +43,16 @@ section {
     }
 }
 
-.vector-contact {
-    position: absolute;
-    left: 0;
-    width: calc(50vw - 960px);
-    top: 50%;
-    transform: translateY(-50%);
-    height: 4px;
-}
-
 .contact-left {
     display: flex;
     align-items: center;
     gap: 42px;
+}
+
+.vector-contact {
+    width: 102px;
+    height: 4px;
+    border-radius: 4px;
 }
 
 @media (max-height: 770px) {
@@ -64,22 +61,9 @@ section {
     }
 }
 
-@media (min-width: 1921px) {
-    .vector-contact-responsive {
-        display: none;
-    }
-}
-
-@include respond-to('extra-large') {
-    // .vector-contact-responsive {
-    //     display: none;
-    // }
-}
-
 @include respond-to('extra-small') {
-    .vector-contact-responsive {
+    .vector-contact {
         width: 50px;
-        height: 4px;
     }
 
     .scroll-down {
