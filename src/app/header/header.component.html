@@ -20,9 +20,9 @@
     </div>
 </header>
 <div class="navbar-burger" [class.animate]="!navbarHidden">
-    <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">About me</a>
-    <a href="#my-skills" (click)="scrollToElement('my-skills', -120); $event.preventDefault()">Skills</a>
-    <a href="#portfolio" (click)="scrollToElement('portfolio', -60); $event.preventDefault()">Portfolio</a>
+    <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' | translate }}</a>
+    <a href="#my-skills" (click)="scrollToElement('my-skills', -120); $event.preventDefault()">{{ 'SKILLS' | translate }}</a>
+    <a href="#portfolio" (click)="scrollToElement('portfolio', -60); $event.preventDefault()">{{ 'PORTFOLIO' | translate }}</a>
     <div class="language-selector-mobile" (click)="closeNavbar()">
         <p class="language" [class.active]="translate.currentLang === 'de'" (click)="switchLanguage('de')">DE</p>
         <p class="line">|</p>
