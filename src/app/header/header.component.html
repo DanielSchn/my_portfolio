@@ -2,13 +2,13 @@
     <div class="header-container">
         <img class="logo" src="./assets/img/ds_logo_color.png" alt="Daniel Schneider Logo">
         <div class="navbar">
-            <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">Über mich</a>
-            <a href="#my-skills" (click)="scrollToElement('my-skills', -110); $event.preventDefault()">Skills</a>
-            <a href="#portfolio" (click)="scrollToElement('portfolio', -20); $event.preventDefault()">Portfolio</a>
+            <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' | translate }}</a>
+            <a href="#my-skills" (click)="scrollToElement('my-skills', -110); $event.preventDefault()">{{ 'SKILLS' | translate }}</a>
+            <a href="#portfolio" (click)="scrollToElement('portfolio', -20); $event.preventDefault()">{{ 'PORTFOLIO' | translate }}</a>
             <div class="language-selector">
-                <p class="german">DE</p>
-                <p>|</p>
-                <p class="english">EN</p>
+                <p class="language" [class.active]="translate.currentLang === 'de'" (click)="switchLanguage('de')">DE</p>
+                <p class="line">|</p>
+                <p class="language" [class.active]="translate.currentLang === 'en'" (click)="switchLanguage('en')">EN</p>
             </div>
         </div>
         <div class="burger-button">

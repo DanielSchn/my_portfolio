@@ -51,24 +51,29 @@ header {
 .language-selector-mobile {
     display: flex;
     gap: 8px;
-
-    >p {
-        font-size: 23px;
-        color: $white;
-    }
 }
 
 .language-selector {
     display: flex;
     gap: 8px;
+}
 
-    >p {
-        font-size: 23px;
-        color: $white;
+.language {
+    cursor: pointer;
+    font-size: 23px;
+    color: $white;
+
+    &:hover {
+        color: $skyblue;
     }
 }
 
-.english {
+.line {
+    font-size: 23px;
+    color: $white;
+}
+
+.active {
     border-bottom: 2px solid $skyblue;
     border-radius: 1px;
 }
