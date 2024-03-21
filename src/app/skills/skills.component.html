@@ -1,29 +1,22 @@
 <section>
     <div class="skill-container">
-
         <a class="button-responsive" href="#contact"><button>Get in touch</button></a>
         <div class="skill-icons-container">
             <div class="skillset-icons" *ngFor="let skill of skillsList">
-                <img [src]="skill.url" [alt]="skill.name">
+                <img class="skillicons" [src]="skill.url" [alt]="skill.name">
                 <p [innerHTML]="skill.name"></p>
             </div>
         </div>
-
         <div class="text-container">
             <div class="skills-line-container">
                 <h1>{{ 'SKILLS' | translate }}</h1>
                 <img class="skill-vector" src="./assets/img/icons/skills_line.png" alt="Vector">
             </div>
-
             <span>
                 {{ 'SKILLS_DESC_ONE' | translate }}<br>
                 {{ 'SKILLS_DESC_TWO' | translate }}
-                <!-- Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt. -->
-                <!-- I have gained experience in building projects with various<br>front end technologies and concepts. -->
             </span>
             <a class="button-desktop" href="#contact"><button>Get in touch</button></a>
         </div>
-        
     </div>
-    
 </section>

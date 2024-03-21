@@ -1,27 +1,20 @@
 <section>
-
-
     <div class="portfolio-container">
-
         <img class="shadow-right" src="./assets/img/icons/shadow_skills_portfolio.png" alt="Shadow">
         <img class="shadow-left" src="./assets/img/icons/shadow_left_contact.png" alt="Shadow">
         <img class="shadow-right-mobile" src="./assets/img/icons/shadow_portfolio_right.png" alt="Shadow">
-
         <div class="portfolio-headline">
             <div class="text-portfolio-wrapper">
                 <div class="text-portfolio">
                     <img class="portfolio-line" src="./assets/img/icons/portfolio_line.png" alt="Vector">
-                    <!-- <img class="portfolio-line-responsive" src="./assets/img/icons/portfolio_line.png" alt="Vector"> -->
                     <h1>Portfolio</h1>
                 </div>
                 <span class="description">
                     {{ 'PORTFOLIO_DESC_ONE' | translate }}<br>
                     {{ 'PORTFOLIO_DESC_TWO' | translate }}
-                    <!-- This page is a example of my work!<br>Feel free to view the projects I have developed. -->
                 </span>
             </div>
         </div>
-
         <div class="enumeration-position">
             <div class="enumeration-container">
                 <div class="portfolio" *ngFor="let list of portfolioList">
@@ -42,7 +35,5 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>

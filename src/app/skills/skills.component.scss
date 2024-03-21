@@ -46,9 +46,14 @@ section {
     flex-direction: column;
     text-align: center;
     width: 60px;
+}
 
-    >img {
-        width: 60px
+.skillicons {
+    width: 60px;
+    filter: brightness(0.5);
+
+    &:hover {
+        filter: brightness(1);
     }
 }
 
@@ -184,6 +189,10 @@ span {
 @include respond-to('small') {
     .skill-container {
         width: 90%;
+    }
+
+    .skillicons {
+        filter: brightness(1);
     }
 }
 

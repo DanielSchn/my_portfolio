@@ -14,10 +14,6 @@
                 </div>
                 <div class="text-container">
                     <span>{{ 'CONTACT_DESC' | translate }}</span>
-                    <!-- <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and
-                        contributing
-                        to your projects with my work.</span>
-                    <span>Need a Frontend developer?<b> Contact me!</b></span> -->
                 </div>
             </div>
             <div class="contact-container">
@@ -28,14 +24,12 @@
                     @if (!name.valid && name.touched) {
                     <span class="warn-message">{{ 'WARN_NAME' | translate }}</span>
                     }
-
                     <input class="input-textarea-styling input-style" #email="ngModel" [(ngModel)]="contactData.email"
                         type="email" name="email" id="email" placeholder="{{ 'INPUT_MAIL' | translate }}"
                         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                     @if (!email.valid && email.touched) {
                     <span class="warn-message">{{ 'WARN_MAIL' | translate }}</span>
                     }
-
                     <textarea class="input-textarea-styling textarea-style" #message="ngModel" minlength="4"
                         [(ngModel)]="contactData.message" name="message" id="message"
                         placeholder="{{ 'INPUT_MESSAGE' | translate }}" cols="30" rows="10" required></textarea>
@@ -47,8 +41,6 @@
                             <input class="privacy-checkbox" type="checkbox"
                                 [(ngModel)]="contactData.agreeToPrivacyPolicy" name="privacyPolicy" required>
                             <span class="custom-checkbox"></span>
-                            <!-- <p>I've read the <a href="privacy">privacy
-                                    policy</a> and agree to the processing of my data as outlined.</p> -->
                             <p>{{ 'INPUT_CHECKBOX_ONE' | translate }}<a href="privacy">{{ 'INPUT_CHECKBOX_TWO' |
                                     translate }}</a>{{ 'INPUT_CHECKBOX_THREE' | translate }}</p>
                         </label>

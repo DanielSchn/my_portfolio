@@ -2,7 +2,6 @@
 
 section {
     position: relative;
-    // @include dFlex();
     width: 100%;
 }
 
@@ -74,9 +73,7 @@ p {
     width: 100%;
     max-width: 1920px;
     margin-left: auto;
-    /* Sorgt dafür, dass der Inhalt linksbündig mit einem Abstand zum linken Rand ist */
     position: relative;
-
 }
 
 .description {
@@ -208,7 +205,6 @@ p {
             margin-left: 32px;
         }
     }
-
 }
 
 @include respond-to('extra-large') {
