@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -13,7 +14,7 @@ export class PortfolioComponent {
     {
       name: 'Join',
       img: './assets/img/join.png',
-      description: 'Task manager inspired by the Kanban System.',
+      descriptionKey: 'project_description.join_description',
       tech: 'JavaScript | HTML | CSS',
       live: 'https://join.dschneider-dev.de',
       github: 'https://github.com/DanielSchn/join_group'
@@ -21,7 +22,7 @@ export class PortfolioComponent {
     {
       name: 'El Pollo Loco',
       img: './assets/img/pollo_loco.png',
-      description: 'Jump, run and throw game based on object oriented development.',
+      descriptionKey: 'project_description.pollo_loco_description',
       tech: 'JavaScript | HTML | CSS | OOP',
       live: 'https://polloloco.dschneider-dev.de',
       github: 'https://github.com/DanielSchn/el_pollo_loco'
@@ -29,7 +30,7 @@ export class PortfolioComponent {
     {
       name: 'Pokedex',
       img: './assets/img/pokedex.png',
-      description: 'A short journey back to childhood. Pokedex with a rest api.',
+      descriptionKey: 'project_description.pokedex_description',
       tech: 'JavaScript | HTML | CSS | Rest Api',
       live: 'https://daniel-schneider.developerakademie.net/pokedex/',
       github: 'https://github.com/DanielSchn/Pokedex_API'

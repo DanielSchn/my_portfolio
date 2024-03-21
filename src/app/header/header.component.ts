@@ -10,9 +10,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
+
+
 export class HeaderComponent {
 
+
   constructor(public translate: TranslateService) { }
+
 
   navbarHidden = true;
 
@@ -47,10 +51,12 @@ export class HeaderComponent {
     }
   }
 
+
   switchLanguage(lang: string) {
     this.translate.use(lang);
   }
 
+  
   isCurrentLang(lang: string): boolean {
     return this.translate.currentLang === lang;
   }

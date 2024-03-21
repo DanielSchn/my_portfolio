@@ -18,14 +18,8 @@ section {
 .text-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     max-width: 1920px;
-    // margin-right: 64px;
-
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: start;
-    // gap: 40px;
 }
 
 .skills-line-container {
@@ -204,8 +198,6 @@ span {
     }
 
     .text-container {
-        align-items: start;
-
         >span {
             width: 90%;
             margin-right: 16px;

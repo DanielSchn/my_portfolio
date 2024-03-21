@@ -1,20 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
 
   skillsList = [
-    {
-      name: 'JavaScript',
-      url: './assets/img/icons/javascript.png'
-    },
     {
       name: 'Angular',
       url: './assets/img/icons/angular.png'
@@ -24,8 +21,16 @@ export class SkillsComponent {
       url: './assets/img/icons/typescript.png'
     },
     {
+      name: 'JavaScript',
+      url: './assets/img/icons/javascript.png'
+    },
+    {
       name: 'HTML5',
       url: './assets/img/icons/html.png'
+    },
+    {
+      name: 'CSS',
+      url: './assets/img/icons/css.png'
     },
     {
       name: 'Git',
@@ -34,10 +39,6 @@ export class SkillsComponent {
     {
       name: 'Firebase',
       url: './assets/img/icons/firebase.png'
-    },
-    {
-      name: 'CSS',
-      url: './assets/img/icons/css.png'
     },
     {
       name: 'Scrum',

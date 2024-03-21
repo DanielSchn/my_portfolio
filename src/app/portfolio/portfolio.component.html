@@ -15,8 +15,8 @@
                     <h1>Portfolio</h1>
                 </div>
                 <span class="description">
-                    Diese Seite ist ein Beispiel meiner Arbeit.
-                    Schauen Sie sich gerne die Projekte an, die ich entwickelt habe.
+                    {{ 'PORTFOLIO_DESC_ONE' | translate }}<br>
+                    {{ 'PORTFOLIO_DESC_TWO' | translate }}
                     <!-- This page is a example of my work!<br>Feel free to view the projects I have developed. -->
                 </span>
             </div>
@@ -35,15 +35,12 @@
                     <div class="popup">
                         <div class="portfolio-description">
                             <h1 [innerHTML]="list.name"></h1>
-                            <span class="descript" [innerHTML]="list.description"></span>
+                            <span class="descript" innerHTML="{{ list.descriptionKey | translate }}"></span>
                             <span class="tech" [innerHTML]="list.tech"></span>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-
         </div>
 
 
