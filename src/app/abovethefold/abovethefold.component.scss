@@ -77,13 +77,20 @@ section {
 .shadow-right {
     height: 912px;
     position: absolute;
-    right: -225px;
+    right: -280px;
 }
 
 @media (max-height: 770px) {
  section {
     margin-top: 64px;
  }
+}
+
+@include respond-to('extra-large') {
+    .shadow-left,
+    .shadow-right {
+        height: 800px;
+    }
 }
 
 @include respond-to('medium') {

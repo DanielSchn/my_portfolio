@@ -125,14 +125,14 @@ header {
     visibility: visible;
 }
 
-@media (min-width: 651px) {
+@media (min-width: 751px) {
     .burger-menu-button,
     .burger-button {
         display: none;
     }
 }
 
-@include respond-to('extra-small') {
+@include respond-to('small') {
     .navbar {
         display: none;
     }

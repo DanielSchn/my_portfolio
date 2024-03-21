@@ -17,7 +17,7 @@ textarea::placeholder {
 
 h1 {
     font-size: 90px;
-    margin-right: 64px;
+    margin-right: 16px;
 }
 
 a {
@@ -231,7 +231,7 @@ form {
 
 @include respond-to('extra-large') {
     span {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     h1 {
@@ -307,8 +307,13 @@ form {
     .problem-container {
         gap: 8px;
 
+        >img {
+            border-radius: 4px;
+            height: 4px;
+        }
+
         >h2 {
-            font-size: 16px;
+            font-size: 18px;
         }
     }
 
@@ -334,5 +339,9 @@ form {
 
     .vector-line {
         width: 64px;
+    }
+
+    .contact-section {
+        width: 95%;
     }
 }

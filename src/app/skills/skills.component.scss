@@ -13,6 +13,7 @@ section {
     width: 100%;
     max-width: 1920px;
     @include dFlex(space-between);
+    gap: 64px;
 }
 
 .text-container {
@@ -20,14 +21,13 @@ section {
     flex-direction: column;
     align-items: start;
     max-width: 1920px;
+    width: 100%
 }
 
 .skills-line-container {
     @include dFlex(flex-start);
     width: 100%;
     position: relative;
-
-    // gap: 64px;
 }
 
 .skill-icons-container {
@@ -181,13 +181,21 @@ span {
     }
 }
 
+@include respond-to('small') {
+    .skill-container {
+        width: 90%;
+    }
+}
+
 @include respond-to('extra-small') {
     .skills-line-container {
         justify-content: center;
         gap: 16px;
 
         >h1 {
-            font-size: 45px;
+            font-size: 32px;
+            margin-right: 0;
+            margin-left: 32px;
         }
 
         >img {

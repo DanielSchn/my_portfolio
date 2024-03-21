@@ -117,7 +117,7 @@ span {
     }
 
     .wave {
-        top: 480px;
+        top: 493px;
     }
 }
 
@@ -131,7 +131,7 @@ span {
     }
 
     span {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .bulb-container {
@@ -147,7 +147,7 @@ span {
     }
 
     .wave {
-        top: 390px;
+        top: 400px;
     }
 }
 
@@ -171,6 +171,10 @@ span {
     span {
         font-size: 16px;
     }
+
+    .about-me {
+        margin-left: 0;
+    }
 }
 
 @include respond-to('small') {
@@ -179,7 +183,6 @@ span {
     }
 
     .about-me {
-        margin-left: 0;
         width: 530px;
     }
 
