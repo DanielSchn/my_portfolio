@@ -164,6 +164,13 @@ p {
     color: $white;
 }
 
+.btn1,
+.btn2 {
+    &:hover {
+        filter: brightness(1.2);
+    }
+}
+
 .portfolio {
     width: 600px;
     height: 600px;

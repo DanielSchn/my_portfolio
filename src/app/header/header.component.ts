@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
@@ -15,7 +16,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeaderComponent {
 
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, private router: Router) { }
 
 
   navbarHidden = true;
@@ -43,12 +44,25 @@ export class HeaderComponent {
 
 
   scrollToElement(elementId: string, yOffset: number): void {
-    this.closeNavbar();
-    const element = document.getElementById(elementId);
-    if (element) {
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        this.performScrolling(elementId, yOffset);
+      });
+    } else {
+      this.performScrolling(elementId, yOffset);
     }
+  }
+
+
+  private performScrolling(elementId: string, yOffset: number): void {
+    this.closeNavbar();
+    setTimeout(() => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 0);
   }
 
 

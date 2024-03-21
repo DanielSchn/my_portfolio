@@ -42,7 +42,7 @@ section {
 }
 
 .skillset-icons {
-    @include dFlex();
+    @include dFlex(end);
     flex-direction: column;
     text-align: center;
     width: 60px;
