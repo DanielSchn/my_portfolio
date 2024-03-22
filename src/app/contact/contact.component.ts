@@ -23,6 +23,7 @@ export class ContactComponent {
   };
 
   mailTest = true;
+  showSubmitMessage:any = false;
 
   post = {
     endPoint: 'https://dschneider-dev.de/sendMail.php',
@@ -36,7 +37,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {    // Am ende muss dieser mailTest weg
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {    // Am ende muss dieser mailTest weg oder oben mailTest auf false
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -47,10 +48,13 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // Am ende muss dieser else if teil weg
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // Am ende muss dieser else if teil weg oder oben mailTest auf false
       console.log('sending successfull');
       ngForm.resetForm();
+      this.showSubmitMessage = true;
+      setTimeout(() => {
+        this.showSubmitMessage = false;
+      }, 3000);
     }
   }
-
 }

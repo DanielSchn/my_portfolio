@@ -229,6 +229,12 @@ form {
     background-color: $grey;
 }
 
+.submit-message {
+    font-size: 20px;
+    color: $valid;
+    text-align: center;
+}
+
 @include respond-to('extra-large') {
     span {
         font-size: 16px;
@@ -344,4 +350,28 @@ form {
     .contact-section {
         width: 95%;
     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submit-message {
+    font-size: 20px;
+    color: $valid;
+    text-align: center;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-out forwards;
 }
