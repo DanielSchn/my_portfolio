@@ -17,7 +17,7 @@ textarea::placeholder {
 
 h1 {
     font-size: 90px;
-    margin-right: 16px;
+    padding-right: 32px;
 }
 
 a {
@@ -306,7 +306,8 @@ form {
 
         >h1 {
             font-size: 45px;
-            margin-right: 16px;
+            padding-right: 16px;
+            
         }
     }
 
@@ -345,10 +346,6 @@ form {
 
     .vector-line {
         width: 64px;
-    }
-
-    .contact-section {
-        width: 95%;
     }
 }
 
