@@ -19,9 +19,8 @@ section {
 .text-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     max-width: 1920px;
-    width: 100%;
 
     >span {
         padding-right: 160px; 
@@ -29,7 +28,7 @@ section {
 }
 
 .skills-line-container {
-    @include dFlex(flex-end);
+    @include dFlex(flex-start);
     width: 100%;
     position: relative;
 }
@@ -221,6 +220,7 @@ span {
 @include respond-to('extra-small') {
     .skills-line-container {
         gap: 16px;
+        justify-content: flex-end;
 
         >h1 {
             font-size: 32px;
