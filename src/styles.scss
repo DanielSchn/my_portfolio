@@ -85,7 +85,6 @@ body {
 
 /* Custom Scrollbar */
 html{
-  scroll-behavior: smooth !important;
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -102,17 +101,18 @@ html{
 
 @include respond-to('small') {
   html{
-    scroll-behavior: smooth !important;
-    ::-webkit-scrollbar {
-      width: 0;
-    }
+    // scroll-behavior: smooth !important;
+    // ::-webkit-scrollbar {
+    //   width: 0;
+    // }
   
-    ::-webkit-scrollbar-track {
-      width: 0;
-    }
+    // ::-webkit-scrollbar-track {
+    //   width: 0;
+    // }
   
-    ::-webkit-scrollbar-thumb {
-      width: 0;
-    }
+    // ::-webkit-scrollbar-thumb {
+    //   width: 0;
+    // }
+    scrollbar-width: none;
   }
 }

@@ -18,14 +18,14 @@ header {
 
 .logo {
     height: 50px;
-    margin-left: 80px;
+    padding-left: 64px;
 }
 
 .burger-button {
     position: relative;
     width: 30px;
     height: 32px;
-    margin-right: 64px;
+    padding-right: 64px;
 }
 
 .burger-menu-button {
@@ -142,6 +142,6 @@ header {
     }
 
     .logo {
-        margin-left: 64px;
+        padding-left: 64px;
     }
 }

@@ -52,6 +52,25 @@ form {
     border-radius: 4px;
 }
 
+.goup-button {
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+
+    &:hover {
+        content: url('../../assets/img/icons/goup_hover.png');
+    }
+}
+
+.goup-container {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 64px;
+    padding-top: 32px;
+}
+
 .contact-description {
     width: 100%;
     max-width: 1920px;

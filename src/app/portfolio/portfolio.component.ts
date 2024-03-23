@@ -28,12 +28,20 @@ export class PortfolioComponent {
       github: 'https://github.com/DanielSchn/el_pollo_loco'
     },
     {
-      name: 'Pokedex',
+      name: 'Placeholder',
       img: './assets/img/pokedex.png',
       descriptionKey: 'project_description.pokedex_description',
       tech: 'JavaScript | HTML | CSS | Rest Api',
-      live: 'https://daniel-schneider.developerakademie.net/pokedex/',
-      github: 'https://github.com/DanielSchn/Pokedex_API'
-    },
+      live: '#home',
+      github: '#home'
+    }, 
+    // {
+    //   name: 'Pokedex',
+    //   img: './assets/img/pokedex.png',
+    //   descriptionKey: 'project_description.pokedex_description',
+    //   tech: 'JavaScript | HTML | CSS | Rest Api',
+    //   live: 'https://daniel-schneider.developerakademie.net/pokedex/',
+    //   github: 'https://github.com/DanielSchn/Pokedex_API'
+    // },
   ];
 }

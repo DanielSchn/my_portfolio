@@ -51,9 +51,15 @@
                     <input class="submit-button" type="submit" [disabled]="!contactForm.valid"
                         [ngClass]="{'submit-button-active': contactForm.valid, 'submit-button-inactive': !contactForm.valid}"
                         value="{{ 'BUTTON_SEND' | translate }}">
-                        <span *ngIf="showSubmitMessage" class="submit-message fadeIn">Thank you, your message has been sent!</span>
+                    <span *ngIf="showSubmitMessage" class="submit-message fadeIn">Thank you, your message has been
+                        sent!</span>
                 </form>
             </div>
+        </div>
+        <div class="goup-container">
+            <a href="#home">
+                <img class="goup-button" src="./assets/img/icons/goup.png" alt="GoUp">
+            </a>
         </div>
     </div>
 </section>

@@ -1,28 +1,33 @@
 <header>
-    <div class="header-container">
-        <img class="logo" src="./assets/img/ds_logo_color.png" alt="Daniel Schneider Logo">
-        <div class="navbar">
-            <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' |
-                translate }}</a>
-            <a href="#my-skills" (click)="scrollToElement('my-skills', -110); $event.preventDefault()">{{ 'SKILLS' |
-                translate }}</a>
-            <a href="#portfolio" (click)="scrollToElement('portfolio', -90); $event.preventDefault()">{{ 'PORTFOLIO' |
-                translate }}</a>
-            <div class="language-selector">
-                <p class="language" [class.active]="translate.currentLang === 'de'" (click)="switchLanguage('de')">DE
-                </p>
-                <p class="line">|</p>
-                <p class="language" [class.active]="translate.currentLang === 'en'" (click)="switchLanguage('en')">EN
-                </p>
+        <div class="header-container">
+            <a href="#home">
+                <img class="logo" src="./assets/img/ds_logo_color.png" alt="Daniel Schneider Logo">
+            </a>
+            <div class="navbar">
+                <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' |
+                    translate }}</a>
+                <a href="#my-skills" (click)="scrollToElement('my-skills', -110); $event.preventDefault()">{{ 'SKILLS' |
+                    translate }}</a>
+                <a href="#portfolio" (click)="scrollToElement('portfolio', -90); $event.preventDefault()">{{ 'PORTFOLIO'
+                    |
+                    translate }}</a>
+                <div class="language-selector">
+                    <p class="language" [class.active]="translate.currentLang === 'de'" (click)="switchLanguage('de')">
+                        DE
+                    </p>
+                    <p class="line">|</p>
+                    <p class="language" [class.active]="translate.currentLang === 'en'" (click)="switchLanguage('en')">
+                        EN
+                    </p>
+                </div>
+            </div>
+            <div class="burger-button">
+                <img class="burger-menu-button" src="./assets/img/icons/burger_menu.png" alt="Menu Open"
+                    (click)="toggleNavbar($event)" [class.show]="navbarHidden">
+                <img class="burger-menu-button" src="./assets/img/icons/burger_menu_close.png" alt="Menu Close"
+                    (click)="toggleNavbar($event)" [class.show]="!navbarHidden">
             </div>
         </div>
-        <div class="burger-button">
-            <img class="burger-menu-button" src="./assets/img/icons/burger_menu.png" alt="Menu Open"
-                (click)="toggleNavbar($event)" [class.show]="navbarHidden">
-            <img class="burger-menu-button" src="./assets/img/icons/burger_menu_close.png" alt="Menu Close"
-                (click)="toggleNavbar($event)" [class.show]="!navbarHidden">
-        </div>
-    </div>
 </header>
 <div class="navbar-burger" [class.animate]="!navbarHidden">
     <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' | translate

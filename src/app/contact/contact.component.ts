@@ -22,7 +22,7 @@ export class ContactComponent {
     agreeToPrivacyPolicy: false,
   };
 
-  mailTest = true;
+  mailTest = false;
   showSubmitMessage: any = false;
 
   post = {
@@ -42,6 +42,7 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.showMessage();
           },
           error: (error) => {
             console.error(error);
