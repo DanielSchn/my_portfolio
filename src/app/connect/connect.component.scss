@@ -19,7 +19,7 @@ section {
     justify-content: space-between;
     width: 100%;
     z-index: 5;
-    margin-left: 64px;
+    padding-left: 64px;
 }
 
 .scroll-down {
@@ -71,6 +71,10 @@ section {
     }
 
     .vector-contact-container {
-        width: 320px;
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 16px;
     }
 }

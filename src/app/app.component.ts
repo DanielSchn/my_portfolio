@@ -5,6 +5,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-root',
@@ -28,5 +30,7 @@ export class AppComponent {
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang?.match(/en|de/) ? browserLang : 'en');
+
+    gsap.registerPlugin(ScrollTrigger);
   }
 }

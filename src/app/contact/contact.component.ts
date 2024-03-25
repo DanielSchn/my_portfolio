@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,11 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  @ViewChild('contactMe') contactMe!: ElementRef;
+
+  ngAfterViewInit() {
+    this.initScrollAnimation();
+  }
 
   http = inject(HttpClient);
 
@@ -60,5 +66,20 @@ export class ContactComponent {
     setTimeout(() => {
       this.showSubmitMessage = false;
     }, 3000);
+  }
+
+  initScrollAnimation() {
+    const contactElement = this.contactMe.nativeElement;
+
+    gsap.from(contactElement, {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: contactElement,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
   }
 }
