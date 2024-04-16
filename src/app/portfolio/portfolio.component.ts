@@ -22,6 +22,14 @@ export class PortfolioComponent {
 
   portfolioList = [
     {
+      name: 'DABubble',
+      img: './assets/img/coming_soon.png',
+      descriptionKey: 'project_description.dabubble_description',
+      tech: 'Angular | TypeScript | Firebase | SCSS',
+      live: 'https://dabubble.dschneider-dev.de',
+      github: 'https://github.com/DanielSchn/'
+    },
+    {
       name: 'Join',
       img: './assets/img/join.png',
       descriptionKey: 'project_description.join_description',

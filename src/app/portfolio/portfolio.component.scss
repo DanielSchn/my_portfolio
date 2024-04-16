@@ -286,12 +286,18 @@ p {
         width: 280px;
         height: 280px;
 
-        &:hover {
-            >.portfolio-image {
-                >img {
-                    scale: 1.2;
-                }
+        >.portfolio-image {
+            >img {
+                scale: 1.2;
             }
+        }
+
+        >.buttons {
+            display: flex;
+        }
+
+        >.popup {
+            display: block;
         }
     }
 
