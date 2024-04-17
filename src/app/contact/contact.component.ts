@@ -43,7 +43,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {    // Am ende muss dieser mailTest weg oder oben mailTest auf false
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -55,7 +55,7 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // Am ende muss dieser else if teil weg oder oben mailTest auf false
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       this.showMessage();
     }
@@ -70,7 +70,6 @@ export class ContactComponent {
 
   initScrollAnimation() {
     const contactElement = this.contactMe.nativeElement;
-
     gsap.from(contactElement, {
       x: -100,
       opacity: 0,

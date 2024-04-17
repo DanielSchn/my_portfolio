@@ -18,47 +18,26 @@
             </div>
             <div class="contact-container">
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                        <input class="input-textarea-styling input-style" #name="ngModel" [(ngModel)]="contactData.name"
-                            minlength="2" type="text" id="name" name="name" placeholder="{{ 'INPUT_NAME' | translate }}"
-                            required>
-                        <!-- @if (!name.valid && name.touched) {
-                        <span class="warn-message">{{ 'WARN_NAME' | translate }}</span>
-                        } -->
-                        <span *ngIf="name.invalid && name.touched" class="warn-message">{{ 'WARN_NAME' | translate }}</span>
-                        <span *ngIf="!(name.invalid && name.touched)"></span>
-                    <input class="input-textarea-styling input-style" #email="ngModel" [(ngModel)]="contactData.email"
-                        type="email" name="email" id="email" placeholder="{{ 'INPUT_MAIL' | translate }}"
-                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-                    <!-- @if (!email.valid && email.touched) {} -->
+                    <input class="input-textarea-styling input-style" #name="ngModel" [(ngModel)]="contactData.name" minlength="2" type="text" id="name" name="name" placeholder="{{ 'INPUT_NAME' | translate }}" required>
+                    <span *ngIf="name.invalid && name.touched" class="warn-message">{{ 'WARN_NAME' | translate }}</span>
+                    <span *ngIf="!(name.invalid && name.touched)"></span>
+                    <input class="input-textarea-styling input-style" #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="{{ 'INPUT_MAIL' | translate }}" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                     <span *ngIf="email.invalid && email.touched" class="warn-message">{{ 'WARN_MAIL' | translate }}</span>
                     <span *ngIf="!(email.invalid && email.touched)"></span>
-                    
-                    <textarea class="input-textarea-styling textarea-style" #message="ngModel" minlength="4"
-                        [(ngModel)]="contactData.message" name="message" id="message"
-                        placeholder="{{ 'INPUT_MESSAGE' | translate }}" cols="30" rows="10" required></textarea>
-                    <!-- @if (!message.valid && message.touched) {} -->
+                    <textarea class="input-textarea-styling textarea-style" #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message" placeholder="{{ 'INPUT_MESSAGE' | translate }}" cols="30" rows="10" required></textarea>
                     <span *ngIf="message.invalid && message.touched" class="warn-message">{{ 'WARN_MESSAGE' | translate }}</span>
                     <span *ngIf="!(message.invalid && message.touched)"></span>
                     <div class="privacy-container">
                         <label class="custom-checkbox-label">
-                            <input class="privacy-checkbox" type="checkbox"
-                                [(ngModel)]="contactData.agreeToPrivacyPolicy" name="privacyPolicy" required>
+                            <input class="privacy-checkbox" type="checkbox" [(ngModel)]="contactData.agreeToPrivacyPolicy" name="privacyPolicy" required>
                             <span class="custom-checkbox"></span>
-                            <p>{{ 'INPUT_CHECKBOX_ONE' | translate }}<a href="privacy">{{ 'INPUT_CHECKBOX_TWO' |
-                                    translate }}</a>{{ 'INPUT_CHECKBOX_THREE' | translate }}</p>
+                            <p>{{ 'INPUT_CHECKBOX_ONE' | translate }}<a href="privacy">{{ 'INPUT_CHECKBOX_TWO' | translate }}</a>{{ 'INPUT_CHECKBOX_THREE' | translate }}</p>
                         </label>
-                        <!-- @if (!contactForm.valid && contactForm.touched) {} -->
-                        
                     </div>
-
                     <span *ngIf="contactForm.invalid && contactForm.touched" class="warn-message-privacy" style="height: 20px;">{{ 'WARN_PRIVACY' | translate }}</span>
-                        <span *ngIf="!(contactForm.invalid && contactForm.touched)"></span>
-
-                    <input class="submit-button" type="submit" [disabled]="!contactForm.valid"
-                        [ngClass]="{'submit-button-active': contactForm.valid, 'submit-button-inactive': !contactForm.valid}"
-                        value="{{ 'BUTTON_SEND' | translate }}">
-                    <span *ngIf="showSubmitMessage" class="submit-message fadeIn">Thank you, your message has been
-                        sent!</span>
+                    <span *ngIf="!(contactForm.invalid && contactForm.touched)"></span>
+                    <input class="submit-button" type="submit" [disabled]="!contactForm.valid" [ngClass]="{'submit-button-active': contactForm.valid, 'submit-button-inactive': !contactForm.valid}" value="{{ 'BUTTON_SEND' | translate }}">
+                    <span *ngIf="showSubmitMessage" class="submit-message fadeIn">Thank you, your message has been sent!</span>
                 </form>
             </div>
         </div>

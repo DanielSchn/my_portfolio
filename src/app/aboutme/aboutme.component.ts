@@ -22,7 +22,6 @@ export class AboutmeComponent {
 
   initScrollAnimation() {
     const h1Element = this.myH1.nativeElement;
-
     gsap.from(h1Element, {
       x: -100,
       opacity: 0,

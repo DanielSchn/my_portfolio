@@ -31,7 +31,8 @@
     "join_description": "Task manager inspired by the Kanban system.",
     "pollo_loco_description": "Jump 'n' Run game based on OOP (Object-Oriented Programming).",
     "pokedex_description": "A short journey back to childhood. Pokedex with a rest api.",
-    "dabubble_description": "Chat messenger inspired by slack"
+    "dabubble_description": "Chat messenger inspired by slack",
+    "portfolio_description": "My personal portfolio."
   },
   "IMPRINT_1": "Information according to § 5 TMG",
   "IMPRINT_2": "Postal address:",
