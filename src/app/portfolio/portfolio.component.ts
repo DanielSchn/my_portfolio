@@ -45,14 +45,6 @@ export class PortfolioComponent {
       live: 'https://polloloco.dschneider-dev.de',
       github: 'https://github.com/DanielSchn/el_pollo_loco'
     },
-    // {
-    //   name: 'Pokedex',
-    //   img: './assets/img/pokedex.png',
-    //   descriptionKey: 'project_description.pokedex_description',
-    //   tech: 'JavaScript | HTML | CSS | Rest Api',
-    //   live: 'https://test.dschneider-dev.de/',
-    //   github: 'https://github.com/DanielSchn/Pokedex_API'
-    // },
     {
       name: 'Portfolio',
       img: './assets/img/portfolio.png',

@@ -42,6 +42,7 @@ export class ContactComponent {
     },
   };
 
+  
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -61,12 +62,14 @@ export class ContactComponent {
     }
   }
 
+
   showMessage() {
     this.showSubmitMessage = true;
     setTimeout(() => {
       this.showSubmitMessage = false;
     }, 3000);
   }
+
 
   initScrollAnimation() {
     const contactElement = this.contactMe.nativeElement;

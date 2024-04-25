@@ -12,6 +12,7 @@ import { gsap } from 'gsap';
 export class AbovethefoldComponent {
   @ViewChild('textContainer') textContainer!: ElementRef;
 
+  
   ngAfterViewInit() {
     gsap.from(this.textContainer.nativeElement, {
       scale: 0,
