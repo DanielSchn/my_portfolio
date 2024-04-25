@@ -28,11 +28,27 @@ export class SkillsComponent {
       duration: 1,
       scrollTrigger: {
         trigger: element,
-        start: "top 85%",
-        toggleActions: "play none none none"
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play pause restart reset",
+        onLeave: () => gsap.to(element, { autoAlpha: 0 }),
+        onEnterBack: () => gsap.to(element, { autoAlpha: 1 })
       }
     });
   }
+
+  // initScrollAnimation(element: HTMLElement, x: number) {
+  //   gsap.from(element, {
+  //     x: x,
+  //     opacity: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: element,
+  //       start: "top 85%",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
+  // }
 
   skillsList = [
     {

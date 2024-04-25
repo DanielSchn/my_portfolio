@@ -20,6 +20,21 @@ export class AboutmeComponent {
     this.initScrollAnimation();
   }
 
+  // initScrollAnimation() {
+  //   const h1Element = this.myH1.nativeElement;
+  //   gsap.from(h1Element, {
+  //     x: -100,
+  //     opacity: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: h1Element,
+  //       start: "top 80%",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
+  // }
+
+
   initScrollAnimation() {
     const h1Element = this.myH1.nativeElement;
     gsap.from(h1Element, {
@@ -28,8 +43,11 @@ export class AboutmeComponent {
       duration: 1,
       scrollTrigger: {
         trigger: h1Element,
-        start: "top 80%",
-        toggleActions: "play none none none"
+        start: "top 90%",
+        end: "bottom 20%",
+        toggleActions: "play pause restart reset",
+        onLeave: () => gsap.to(h1Element, { autoAlpha: 0 }),
+        onEnterBack: () => gsap.to(h1Element, { autoAlpha: 1 })
       }
     });
   }
