@@ -30,11 +30,11 @@ export class SkillsComponent {
       duration: 1,
       scrollTrigger: {
         trigger: element,
-        start: "top 85%",
-        // end: "bottom 10%",
-        toggleActions: "play none none none",
-        // onLeave: () => gsap.to(element, { autoAlpha: 0 }),
-        // onEnterBack: () => gsap.to(element, { autoAlpha: 1 })
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play pause restart reset",
+        onLeave: () => gsap.to(element, { autoAlpha: 0 }),
+        onEnterBack: () => gsap.to(element, { autoAlpha: 1 })
       }
     });
   }
