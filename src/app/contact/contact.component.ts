@@ -79,11 +79,11 @@ export class ContactComponent {
       duration: 1,
       scrollTrigger: {
         trigger: contactElement,
-        start: "top 90%",
-        end: "bottom 15%",
+        start: "top 85%",
+        // end: "bottom 15%",
         toggleActions: "play none none none",
-        onLeave: () => gsap.to(contactElement, { autoAlpha: 0 }),
-        onEnterBack: () => gsap.to(contactElement, { autoAlpha: 1 })
+        // onLeave: () => gsap.to(contactElement, { autoAlpha: 0 }),
+        // onEnterBack: () => gsap.to(contactElement, { autoAlpha: 1 })
       }
     });
   }

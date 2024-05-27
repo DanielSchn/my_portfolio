@@ -29,11 +29,11 @@ export class AboutmeComponent {
       duration: 1,
       scrollTrigger: {
         trigger: h1Element,
-        start: "top 90%",
-        end: "bottom 20%",
+        start: "top 80%",
+        // end: "bottom 20%",
         toggleActions: "play none none none",
-        onLeave: () => gsap.to(h1Element, { autoAlpha: 0 }),
-        onEnterBack: () => gsap.to(h1Element, { autoAlpha: 1 })
+        // onLeave: () => gsap.to(h1Element, { autoAlpha: 0 }),
+        // onEnterBack: () => gsap.to(h1Element, { autoAlpha: 1 })
       }
     });
   }
