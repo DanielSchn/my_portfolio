@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 
@@ -14,10 +14,39 @@ import { gsap } from 'gsap';
 export class AboutmeComponent {
   @ViewChild('myH1') myH1!: ElementRef;
 
-  constructor(public translate: TranslateService) {}
+  constructor(public translate: TranslateService) { }
 
   ngAfterViewInit() {
-    this.initScrollAnimation();
+    this.initAnimations();
+  }
+
+
+  initAnimations() {
+    if (this.shouldInitAnimation()) {
+      this.initScrollAnimation();
+    } else {
+      this.resetAnimations();
+    }
+  }
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.initAnimations();
+  }
+
+
+  resetAnimations() {
+    if (this.myH1) {
+      gsap.killTweensOf(this.myH1.nativeElement);
+      gsap.set(this.myH1.nativeElement, { clearProps: "all" });
+    }
+  }
+
+
+  shouldInitAnimation(): boolean {
+    const screenWidth = window.innerWidth;
+    return screenWidth > 650;
   }
 
 

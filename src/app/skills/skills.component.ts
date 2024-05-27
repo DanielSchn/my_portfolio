@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 
@@ -14,12 +14,21 @@ export class SkillsComponent {
   @ViewChild('mySkills') mySkills!: ElementRef;
   @ViewChildren('skillIcons') skillIcons!: QueryList<ElementRef>;
 
-  
+
   ngAfterViewInit() {
-    this.initScrollAnimation(this.mySkills.nativeElement, -100);
-    this.skillIcons.forEach((icon) => {
-      this.initScrollAnimation(icon.nativeElement, -100);
-    });
+    this.initAnimations();
+  }
+
+
+  initAnimations() {
+    if (this.shouldInitAnimation()) {
+      this.initScrollAnimation(this.mySkills.nativeElement, -100);
+      this.skillIcons.forEach((icon) => {
+        this.initScrollAnimation(icon.nativeElement, -100);
+      });
+    } else {
+      this.resetAnimations();
+    }
   }
 
 
@@ -37,6 +46,30 @@ export class SkillsComponent {
         onEnterBack: () => gsap.to(element, { autoAlpha: 1 })
       }
     });
+  }
+
+
+  resetAnimations() {
+    if (this.mySkills) {
+      gsap.killTweensOf(this.mySkills.nativeElement);
+      gsap.set(this.mySkills.nativeElement, { clearProps: "all" });
+    }
+    this.skillIcons.forEach((icon) => {
+      gsap.killTweensOf(icon.nativeElement);
+      gsap.set(icon.nativeElement, { clearProps: "all" });
+    });
+  }
+
+
+  shouldInitAnimation(): boolean {
+    const screenWidth = window.innerWidth;
+    return screenWidth > 650;
+  }
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.initAnimations();
   }
 
 

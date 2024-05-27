@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 
@@ -14,11 +14,59 @@ import { gsap } from 'gsap';
 export class PortfolioComponent {
   @ViewChild('myWork') myWork!: ElementRef;
 
-  constructor() {}
+  constructor() { }
 
   ngAfterViewInit() {
-    this.initScrollAnimation();
+    this.initAnimations();
   }
+
+
+  initScrollAnimation() {
+    const myWorkElement = this.myWork.nativeElement;
+    gsap.from(myWorkElement, {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: myWorkElement,
+        start: "top 90%",
+        end: "bottom 15%",
+        toggleActions: "play pause restart reset",
+        onLeave: () => gsap.to(myWorkElement, { autoAlpha: 0 }),
+        onEnterBack: () => gsap.to(myWorkElement, { autoAlpha: 1 })
+      }
+    });
+  }
+
+
+  initAnimations() {
+    if (this.shouldInitAnimation()) {
+      this.initScrollAnimation();
+    } else {
+      this.resetAnimations();
+    }
+  }
+
+
+  shouldInitAnimation(): boolean {
+    const screenWidth = window.innerWidth;
+    return screenWidth > 650;
+  }
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.initAnimations();
+  }
+
+
+  resetAnimations() {
+    if (this.myWork) {
+      gsap.killTweensOf(this.myWork.nativeElement);
+      gsap.set(this.myWork.nativeElement, { clearProps: "all" });
+    }
+  }
+
 
   portfolioList = [
     {
@@ -54,22 +102,4 @@ export class PortfolioComponent {
       github: 'https://github.com/DanielSchn/my_portfolio'
     }
   ];
-
-
-  initScrollAnimation() {
-    const myWorkElement = this.myWork.nativeElement;
-    gsap.from(myWorkElement, {
-      x: -100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: myWorkElement,
-        start: "top 90%",
-        end: "bottom 15%",
-        toggleActions: "play pause restart reset",
-        onLeave: () => gsap.to(myWorkElement, { autoAlpha: 0 }),
-        onEnterBack: () => gsap.to(myWorkElement, { autoAlpha: 1 })
-      }
-    });
-  }
 }

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { gsap } from 'gsap';
@@ -15,9 +15,11 @@ import { gsap } from 'gsap';
 export class ContactComponent {
   @ViewChild('contactMe') contactMe!: ElementRef;
 
+
   ngAfterViewInit() {
-    this.initScrollAnimation();
+    this.initAnimations();
   }
+
 
   http = inject(HttpClient);
 
@@ -42,7 +44,7 @@ export class ContactComponent {
     },
   };
 
-  
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -86,5 +88,34 @@ export class ContactComponent {
         onEnterBack: () => gsap.to(contactElement, { autoAlpha: 1 })
       }
     });
+  }
+
+
+  initAnimations() {
+    if (this.shouldInitAnimation()) {
+      this.initScrollAnimation();
+    } else {
+      this.resetAnimations();
+    }
+  }
+
+
+  shouldInitAnimation(): boolean {
+    const screenWidth = window.innerWidth;
+    return screenWidth > 650;
+  }
+
+
+  resetAnimations() {
+    if (this.contactMe) {
+      gsap.killTweensOf(this.contactMe.nativeElement);
+      gsap.set(this.contactMe.nativeElement, { clearProps: "all" });
+    }
+  }
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.initAnimations();
   }
 }
