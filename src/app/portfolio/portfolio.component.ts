@@ -66,7 +66,7 @@ export class PortfolioComponent {
         trigger: myWorkElement,
         start: "top 90%",
         end: "bottom 15%",
-        toggleActions: "play pause restart reset",
+        toggleActions: "play none none none",
         onLeave: () => gsap.to(myWorkElement, { autoAlpha: 0 }),
         onEnterBack: () => gsap.to(myWorkElement, { autoAlpha: 1 })
       }

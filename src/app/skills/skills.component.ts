@@ -32,7 +32,7 @@ export class SkillsComponent {
         trigger: element,
         start: "top 90%",
         end: "bottom 10%",
-        toggleActions: "play pause restart reset",
+        toggleActions: "play none none none",
         onLeave: () => gsap.to(element, { autoAlpha: 0 }),
         onEnterBack: () => gsap.to(element, { autoAlpha: 1 })
       }

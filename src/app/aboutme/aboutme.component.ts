@@ -31,7 +31,7 @@ export class AboutmeComponent {
         trigger: h1Element,
         start: "top 90%",
         end: "bottom 20%",
-        toggleActions: "play pause restart reset",
+        toggleActions: "play none none none",
         onLeave: () => gsap.to(h1Element, { autoAlpha: 0 }),
         onEnterBack: () => gsap.to(h1Element, { autoAlpha: 1 })
       }
