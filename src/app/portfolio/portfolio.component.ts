@@ -83,7 +83,7 @@ export class PortfolioComponent {
       descriptionKey: 'project_description.join_description',
       tech: 'JavaScript | HTML | CSS',
       live: 'https://join.dschneider-dev.de',
-      github: 'https://github.com/DanielSchn/join_group'
+      github: 'https://github.com/DanielSchn/join'
     },
     {
       name: 'El Pollo Loco',
