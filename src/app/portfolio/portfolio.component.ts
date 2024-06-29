@@ -75,7 +75,7 @@ export class PortfolioComponent {
       descriptionKey: 'project_description.dabubble_description',
       tech: 'Angular | TypeScript | Firebase | SCSS',
       live: 'https://dabubble.dschneider-dev.de',
-      github: 'https://github.com/DanielSchn/'
+      github: 'https://github.com/DanielSchn/DABubble'
     },
     {
       name: 'Join',
@@ -93,13 +93,13 @@ export class PortfolioComponent {
       live: 'https://polloloco.dschneider-dev.de',
       github: 'https://github.com/DanielSchn/el_pollo_loco'
     },
-    {
-      name: 'Portfolio',
-      img: './assets/img/portfolio.png',
-      descriptionKey: 'project_description.portfolio_description',
-      tech: 'Angular | TypeScript | SCSS | GSAP',
-      live: 'https://dschneider-dev.de/',
-      github: 'https://github.com/DanielSchn/my_portfolio'
-    }
+    // {
+    //   name: 'Portfolio',
+    //   img: './assets/img/portfolio.png',
+    //   descriptionKey: 'project_description.portfolio_description',
+    //   tech: 'Angular | TypeScript | SCSS | GSAP',
+    //   live: 'https://dschneider-dev.de/',
+    //   github: 'https://github.com/DanielSchn/my_portfolio'
+    // }
   ];
 }
