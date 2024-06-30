@@ -81,7 +81,7 @@ export class PortfolioComponent {
       name: 'Join',
       img: './assets/img/join.png',
       descriptionKey: 'project_description.join_description',
-      tech: 'JavaScript | HTML | CSS',
+      tech: 'JavaScript | HTML | CSS | Firebase',
       live: 'https://join.dschneider-dev.de',
       github: 'https://github.com/DanielSchn/join'
     },
