@@ -31,7 +31,7 @@
                         <label class="custom-checkbox-label">
                             <input class="privacy-checkbox" type="checkbox" [(ngModel)]="contactData.agreeToPrivacyPolicy" name="privacyPolicy" required>
                             <span class="custom-checkbox"></span>
-                            <p>{{ 'INPUT_CHECKBOX_ONE' | translate }}<a href="privacy">{{ 'INPUT_CHECKBOX_TWO' | translate }}</a>{{ 'INPUT_CHECKBOX_THREE' | translate }}</p>
+                            <p>{{ 'INPUT_CHECKBOX_ONE' | translate }}<a routerLink="/privacy">{{ 'INPUT_CHECKBOX_TWO' | translate }}</a>{{ 'INPUT_CHECKBOX_THREE' | translate }}</p>
                         </label>
                     </div>
                     <span *ngIf="contactForm.invalid && contactForm.touched" class="warn-message-privacy" style="height: 20px;">{{ 'WARN_PRIVACY' | translate }}</span>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="goup-container">
-            <a href="#home">
+            <a (click)="scrollUp()">
                 <img class="goup-button" src="./assets/img/icons/goup.png" alt="GoUp">
             </a>
         </div>

@@ -1,12 +1,12 @@
 <header>
         <div class="header-container">
-            <a href="#home">
+            <a (click)="scrollToElement('home', 0)">
                 <img class="logo" src="./assets/img/ds_logo_color.png" alt="Daniel Schneider Logo">
             </a>
             <div class="navbar">
-                <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' | translate }}</a>
-                <a href="#my-skills" (click)="scrollToElement('my-skills', -110); $event.preventDefault()">{{ 'SKILLS' | translate }}</a>
-                <a href="#portfolio" (click)="scrollToElement('portfolio', -90); $event.preventDefault()">{{ 'PORTFOLIO' | translate }}</a>
+                <a (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' | translate }}</a>
+                <a (click)="scrollToElement('my-skills', -110); $event.preventDefault()">{{ 'SKILLS' | translate }}</a>
+                <a (click)="scrollToElement('portfolio', -90); $event.preventDefault()">{{ 'PORTFOLIO' | translate }}</a>
                 <div class="language-selector">
                     <p class="language" [class.active]="translate.currentLang === 'de'" (click)="switchLanguage('de')">DE</p>
                     <p class="line">|</p>
@@ -20,10 +20,10 @@
         </div>
 </header>
 <div class="navbar-burger" [class.animate]="!navbarHidden">
-    <a href="#about-me" (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' | translate }}</a>
-    <a href="#my-skills" (click)="scrollToElement('my-skills', -120); $event.preventDefault()">{{ 'SKILLS' | translate }}</a>
-    <a href="#portfolio" (click)="scrollToElement('portfolio', -80); $event.preventDefault()">{{ 'PORTFOLIO' | translate }}</a>
-    <a href="#contact">{{ 'CONTACT' | translate }}</a>
+    <a (click)="scrollToElement('about-me', -50); $event.preventDefault()">{{ 'ABOUT_ME' | translate }}</a>
+    <a (click)="scrollToElement('my-skills', -120); $event.preventDefault()">{{ 'SKILLS' | translate }}</a>
+    <a (click)="scrollToElement('portfolio', -80); $event.preventDefault()">{{ 'PORTFOLIO' | translate }}</a>
+    <a (click)="scrollToElement('contact', -50)">{{ 'CONTACT' | translate }}</a>
     <div class="language-selector-mobile" (click)="closeNavbar()">
         <p class="language" [class.active]="translate.currentLang === 'de'" (click)="switchLanguage('de')">DE</p>
         <p class="line">|</p>

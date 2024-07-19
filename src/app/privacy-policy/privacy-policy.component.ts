@@ -9,5 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-
+  ngAfterViewInit() {
+    window.scrollTo(0, 0);
+  }
 }

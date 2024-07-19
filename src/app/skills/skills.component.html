@@ -1,6 +1,6 @@
 <section>
     <div class="skill-container">
-        <a class="button-responsive" href="#contact"><button>Get in touch</button></a>
+        <a class="button-responsive" (click)="scrollToElement('contact', 0)"><button>Get in touch</button></a>
         <div class="skill-icons-container">
             <div class="skillset-icons" *ngFor="let skill of skillsList">
                 <img #skillIcons class="skillicons" [src]="skill.url" [alt]="skill.name">

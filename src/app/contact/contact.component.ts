@@ -2,13 +2,19 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, ViewChild, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule],
+  imports: [
+    FormsModule,
+    CommonModule,
+    TranslateModule,
+    RouterModule
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -111,6 +117,11 @@ export class ContactComponent {
       gsap.killTweensOf(this.contactMe.nativeElement);
       gsap.set(this.contactMe.nativeElement, { clearProps: "all" });
     }
+  }
+
+  
+  scrollUp() {
+    window.scrollTo(0, 0);
   }
 
 

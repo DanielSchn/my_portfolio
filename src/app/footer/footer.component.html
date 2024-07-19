@@ -2,10 +2,10 @@
     <div class="footer-background">
         <div class="footer-container">
             <div class="name-imprint-container">
-                <a href="#home">
+                <a (click)="scrollUp()">
                     <img src="./assets/img/ds_logo_full.png" alt="Logo">
                 </a>
-                <a class="imprint-link" href="imprint">{{ 'IMPRINT_LINK' | translate }}</a>
+                <a class="imprint-link" routerLink="/imprint">{{ 'IMPRINT_LINK' | translate }}</a>
             </div>
             <div>
                 <p>&copy; Daniel Schneider 2024</p>
@@ -15,7 +15,7 @@
                 <a href="mailto:kontakt@dschneider-dev.de" target="_blank"><img src="./assets/img/icons/mail.png" alt="Mail"></a>
                 <a href="https://linkedin.com/in/d-schneider-dev" target="_blank"><img src="./assets/img/icons/linkedin.png" alt="LinkedIn"></a>
             </div>
-            <a class="imprint-link-mobile" href="imprint">{{ 'IMPRINT_LINK' | translate }}</a>
+            <a class="imprint-link-mobile" routerLink="/imprint">{{ 'IMPRINT_LINK' | translate }}</a>
         </div>
     </div>
 </section>
